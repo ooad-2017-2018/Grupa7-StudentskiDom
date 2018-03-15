@@ -68,7 +68,7 @@ koju je i uzeo pri zaduživanju, nakon cega vraca kljuc i karticu te se briše iz 
 - Konobari: kafeterija
 - Majstori: popravljaju kvarove
 - Recepcija: osoba na recepciji koja kontroliše ko ulazi i izlazi iz doma i održava red i mir nocu
-- Student: sjedi i uživa
+- Student: sjedi i uživa (njegovo je samo da uci, sve su mu omogucili)
 
 
  
