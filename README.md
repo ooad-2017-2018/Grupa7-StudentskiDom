@@ -1,7 +1,9 @@
 # Grupa7-Saban
 
+![alt tag]( https://thumbs.gfycat.com/FriendlyBossyKillerwhale-size_restricted.gif)
+
 ## Tema
-Studentski Dom "äaban äaulic"
+Studentski Dom "≈†aban ≈†aulic"
 
 ## Clanovi
 1. Rijad Pedljak
@@ -11,42 +13,42 @@ Studentski Dom "äaban äaulic"
 
 ### **Opis teme**
 
-Aplikacija ima ulogu da pojednostavi i pomogne radnom osoblju doma i studentima, da bi se omogucio öto laköi i brûi rad. Korisnik ima razne
-pogodnosti, ovisno o kome se radi. Studentima se omogucuje pretraûivanje slobodnih soba i biranje raznih pogodnosti za sobu koju odaberu pri 
-zaduûenju u dom, a uposlenici ovisno od radnog mjesta raspolaûu sa odredenim resursima doma. 
+Aplikacija ima ulogu da pojednostavi i pomogne radnom osoblju doma i studentima, da bi se omogucio ≈°to lak≈°i i br≈æi rad. Korisnik ima razne
+pogodnosti, ovisno o kome se radi. Studentima se omogucuje pretra≈æivanje slobodnih soba i biranje raznih pogodnosti za sobu koju odaberu pri 
+zadu≈æenju u dom, a uposlenici ovisno od radnog mjesta raspola≈æu sa odredenim resursima doma. 
 
 
 ### **Procesi**
 
-**Pocetni konkurs** - prije pocetka akademske godine, odrûava se konkurs koji odreduje ko ce biti primljen u dom, a ko ne. Isto tako, odreduje se
-koji ce studenti dobiti dvokrevetnu, a koji trokrevetnu sobu. Najvecu prednost imaju master studenti i studenti viöih godina koji nisu 
-obnavljali, koji se kasnije porede po prosjeku. Brucoöi imaju prednost nad ponovcima prve godine. 
+**Pocetni konkurs** - prije pocetka akademske godine, odr≈æava se konkurs koji odreduje ko ce biti primljen u dom, a ko ne. Isto tako, odreduje se
+koji ce studenti dobiti dvokrevetnu, a koji trokrevetnu sobu. Najvecu prednost imaju master studenti i studenti vi≈°ih godina koji nisu 
+obnavljali, koji se kasnije porede po prosjeku. Bruco≈°i imaju prednost nad ponovcima prve godine. 
 
 **Registracija studenta** - student odabire jednog, dva ili nijednog cimera, nakon cega dobiva spisak soba koje ispunjavaju zahtjeve (ukoliko
 ne odabere nijednog cimera proizvoljno sistem mu bira cimere nasumicno, tj. sve sobe sa jednim i samo jednim slobodnim mjestom su mu na 
 raspolaganju, ukoliko je odabrao jednog cimera, na raspolaganju su mu prazne dvokrevetne sobe ili trokrevetne sobe sa jednom osobom u njima, 
 ukoliko je odabrao dva cimera, na rapolaganju su mu prazne trokrevetne sobe). Nakon odabrane sobe, ukoliko je soba trenutno prazna, bira se
 internet provajder i paket, te kolicina posteljine koju preuzima zajedno sa kljucem za sobu kasnije. Nakon toga mu se ponudi odgovarajuca cijena
-koju moûe potvrditi ili se vratiti nazad. Ukoliko se potvrdi, prelazi na blagajnu, gdje mu se kreira studentska kartica i izvröi se naplata, 
+koju mo≈æe potvrditi ili se vratiti nazad. Ukoliko se potvrdi, prelazi na blagajnu, gdje mu se kreira studentska kartica i izvr≈°i se naplata, 
 nakon cega je student registrovan na sistem.
 
 **Registracija uposlenika** - uposlenik unosi svoje licne podatke (ime, prezime, JMBG, broj bankovnog racuna, datum rodenja, adresu stanovanja,
 mail..), nakon cega mu se kreira radna kartica i upisan je u sistem.
 
-**Restoran** - student dolazi na obroke u vrijeme predvideno za njih, uzima escajg, te bira öta ûeli jesti. Moguce je i bez escajga
-preuzeti odredeni stvari koje moûe ponijeti u sobu. Nakon preuzimanja hrane, svoju prethodno kreiranu karticu daje uposleniku koji otkuca
-odredeni broj bonova za taj obrok (maksimalan broj bonova po obroku je 3). Broj bonova koje student moûe iskoristiti na svoju karticu je 
+**Restoran** - student dolazi na obroke u vrijeme predvideno za njih, uzima escajg, te bira ≈°ta ≈æeli jesti. Moguce je i bez escajga
+preuzeti odredeni stvari koje mo≈æe ponijeti u sobu. Nakon preuzimanja hrane, svoju prethodno kreiranu karticu daje uposleniku koji otkuca
+odredeni broj bonova za taj obrok (maksimalan broj bonova po obroku je 3). Broj bonova koje student mo≈æe iskoristiti na svoju karticu je 
 ogranicen samo pravilom 3 bona po obroku.
 
-**Kafeterija** - pored restorana, dom sadrûi i kafeteriju u kojoj student na raspolaganju ima razne kolace i pica. Broj ovih bonova je ogranicen na
+**Kafeterija** - pored restorana, dom sadr≈æi i kafeteriju u kojoj student na raspolaganju ima razne kolace i pica. Broj ovih bonova je ogranicen na
 30 u mjesecu. 
 
 **Prijava kvara u sobi** - ukoliko je student primijetio neki kvar, potrebno je popuniti online prijavu kvara, pri cemu se navodi koji je kvar i
-koja je vrsta osoblja potrebna da se kvar popravi (elektricar, vodoinstalater, stolar..). Nakon poslanog zahtjeva, prijava stiûe do uposlenika
+koja je vrsta osoblja potrebna da se kvar popravi (elektricar, vodoinstalater, stolar..). Nakon poslanog zahtjeva, prijava sti≈æe do uposlenika
 koji kvar prijavi odgovarajucem majstoru.
 
-**Razduûivanje studenta** - pri razduûivanju student je duûan platiti tekuci mjesec ukoliko vec nije, i duûan je vratiti istu kolicinu posteljine
-koju je i uzeo pri zaduûivanju, nakon cega vraca kljuc i karticu te se briöe iz sistema.
+**Razdu≈æivanje studenta** - pri razdu≈æivanju student je du≈æan platiti tekuci mjesec ukoliko vec nije, i du≈æan je vratiti istu kolicinu posteljine
+koju je i uzeo pri zadu≈æivanju, nakon cega vraca kljuc i karticu te se bri≈°e iz sistema.
 
 
 ### **Funkcionalnosti**
@@ -63,12 +65,12 @@ koju je i uzeo pri zaduûivanju, nakon cega vraca kljuc i karticu te se briöe iz 
 ### **Akteri**
 
 - Adminitrator: vodi evidenciju o studentima i uposlenicima
-- Blagajnik: raspolaûe novcem, prima uplate studenata i placa druge uposlenike
+- Blagajnik: raspola≈æe novcem, prima uplate studenata i placa druge uposlenike
 - Kuhari: prave hranu za restoran i kolace za kafeteriju
 - Konobari: kafeterija
 - Majstori: popravljaju kvarove
-- Recepcija: osoba na recepciji koja kontroliöe ko ulazi i izlazi iz doma i odrûava red i mir nocu
-- Student: sjedi i uûiva (njegovo je samo da uci, sve su mu omogucili)
+- Recepcija: osoba na recepciji koja kontroli≈°e ko ulazi i izlazi iz doma i odr≈æava red i mir nocu
+- Student: sjedi i u≈æiva (njegovo je samo da uci, sve su mu omogucili)
 
 
  
