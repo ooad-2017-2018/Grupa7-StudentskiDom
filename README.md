@@ -1,6 +1,6 @@
 # Grupa7-Saban
 
-## Tema 
+## Tema
 Studentski Dom "Šaban Šaulic"
 
 ## Clanovi
