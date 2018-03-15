@@ -49,26 +49,26 @@ koji kvar prijavi odgovarajucem majstoru.
 koju je i uzeo pri zaduživanju, nakon cega vraca kljuc i karticu te se briše iz sistema.
 
 
-Funkcionalnosti
+### **Funkcionalnosti**
 
-*mogucnost unosa studenta u sistem
-*mogucnost unosa uposlenika u sistem
-*online prijave kvarova u sobi
-*prijava uposlenika za dolazak na posao
-*odjava uposlenika za odlazak sa posla
-*vodenje evidencije o bonovima za restoran
-*vodenje evidencije o bonovima za kafeteriju
+* mogucnost unosa studenta u sistem
+* mogucnost unosa uposlenika u sistem
+* online prijave kvarova u sobi
+* prijava uposlenika za dolazak na posao
+* odjava uposlenika za odlazak sa posla
+* vodenje evidencije o bonovima za restoran
+* vodenje evidencije o bonovima za kafeteriju
 
 
-Akteri
+### **Akteri**
 
--Adminitrator: vodi evidenciju o studentima i uposlenicima
--Blagajnik: raspolaže novcem, prima uplate studenata i placa druge uposlenike
--Kuhari: prave hranu za restoran i kolace za kafeteriju
--Konobari: kafeterija
--Majstori: popravljaju kvarove
--Recepcija: osoba na recepciji koja kontroliše ko ulazi i izlazi iz doma i održava red i mir nocu
--Student: sjedi i uživa
+- Adminitrator: vodi evidenciju o studentima i uposlenicima
+- Blagajnik: raspolaže novcem, prima uplate studenata i placa druge uposlenike
+- Kuhari: prave hranu za restoran i kolace za kafeteriju
+- Konobari: kafeterija
+- Majstori: popravljaju kvarove
+- Recepcija: osoba na recepciji koja kontroliše ko ulazi i izlazi iz doma i održava red i mir nocu
+- Student: sjedi i uživa
 
 
  
