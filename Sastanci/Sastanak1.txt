@@ -1,0 +1,6 @@
+Sastanak br 1
+-------------
+Mjesto sastanka :  Steleks citaona
+Datum sastanka : 19.03.2018
+Sastanku prisustvovali : Svi clanovi
+Na sastanku radjeni : Use case dijagram , scenarij i prototip
