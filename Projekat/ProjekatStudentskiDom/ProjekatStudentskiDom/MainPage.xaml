@@ -8,6 +8,62 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualStateGroup">
+                <VisualState x:Name="Telefon">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="welcome.Grid.Column" Value="0"/>
+                        <Setter Target="kanvas.Margin" Value="0,1,2,3"/>
+                        <Setter Target="BeFit.Margin" Value="0,10,0,0"/>
+                        <Setter Target="kanvas.Grid.Column" Value="0"/>
+                        <Setter Target="stek.Width" Value="300"/>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Tablet">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="700"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="kanvas.Margin" Value="100,1,2,3"/>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Desktop">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1000"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="welcome.Margin" Value="70"/>
+                        <Setter Target="welcome.FontSize" Value="30"/>
+                    </VisualState.Setters>
+
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <TextBlock x:Name="welcome" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="1" TextWrapping="Wrap" Text="Dobrodošli na stranicu studentskog doma 'Šaban Šaulić'!" TextAlignment="Center" Margin="50" FontSize="20"/>
+        <Canvas x:Name="kanvas" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" Height="342"  Grid.RowSpan="1" Grid.ColumnSpan="1" VerticalAlignment="Top" Width="537">
+            <StackPanel x:Name="stek" HorizontalAlignment="Left" Height="197" VerticalAlignment="Top" Width="470">
+                <TextBlock Text="Username:" TextWrapping="Wrap" Height="30" FontSize="20"/>
+                <TextBox x:Name="korisnickoIme" Height="40" FontSize="20"/>
+                
+                <TextBlock Margin="0,20,0,0" x:Name="sifra" Text="Password:" TextWrapping="Wrap" Height="30" FontSize="20"/>
+                <PasswordBox  Height="40" FontSize="20"/>
+            </StackPanel>
+            <Button x:Name="loginButton" Content="Prijavi se" HorizontalAlignment="Center" VerticalAlignment="Top"  Margin="170,0,0,0"  Canvas.Top="190" Width="82" />
+        </Canvas>
 
     </Grid>
+
 </Page>
