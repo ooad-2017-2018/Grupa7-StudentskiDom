@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="#FF3A8FF5">
         <Grid.RowDefinitions>
             <RowDefinition Height="3*"/>
             <RowDefinition Height="3*"/>
@@ -56,12 +56,12 @@
         <Canvas x:Name="kanvas" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" Height="342"  Grid.RowSpan="1" Grid.ColumnSpan="1" VerticalAlignment="Top" Width="537">
             <StackPanel x:Name="stek" HorizontalAlignment="Left" Height="197" VerticalAlignment="Top" Width="470">
                 <TextBlock Text="Username:" TextWrapping="Wrap" Height="30" FontSize="20"/>
-                <TextBox x:Name="korisnickoIme" Height="40" FontSize="20"/>
+                <TextBox x:Name="korisnickoIme" Height="40" FontSize="20" SelectionHighlightColor="#FF0087F1" Tag="" PreviewKeyDown="korisnickoIme_PreviewKeyDown"/>
                 
                 <TextBlock Margin="0,20,0,0" x:Name="sifra" Text="Password:" TextWrapping="Wrap" Height="30" FontSize="20"/>
-                <PasswordBox  Height="40" FontSize="20"/>
+                <PasswordBox x:Name="sifraPocetni"  Height="40" FontSize="20" PreviewKeyDown="sifraPocetni_PreviewKeyDown"/>
             </StackPanel>
-            <Button x:Name="loginButton" Content="Prijavi se" HorizontalAlignment="Center" VerticalAlignment="Top"  Margin="170,0,0,0"  Canvas.Top="190" Width="82" />
+            <Button x:Name="loginButton" Content="Prijavi se" HorizontalAlignment="Center" VerticalAlignment="Top"  Margin="170,0,0,0"  Canvas.Top="190" Width="82" Click="loginButton_Click" PreviewKeyDown="loginButton_PreviewKeyDown" />
         </Canvas>
 
     </Grid>

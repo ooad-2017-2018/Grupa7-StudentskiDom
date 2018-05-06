@@ -25,11 +25,11 @@ namespace ProjekatStudentskiDom {
             this.password = password;
         }
 
-        public string Ime { get; set; }
-        public string Prezime { get; set; }
-        public string DatumRodjenja { get; set; }
-        public string Username { get; set; }
-        public string Password { get; set; }
-        public string Jmbg { get; set; }
+        public string Ime { get { return ime; } set { this.ime = value; } }
+        public string Prezime { get { return prezime; } set { this.prezime = value; } }
+        public string DatumRodjenja { get { return datumRodjenja; } set { this.datumRodjenja = value; } }
+        public string Username { get { return username; } set { this.username = value; } }
+        public string Password { get { return password; } set { this.password = value; } }
+        public string Jmbg { get { return jmbg; } set { this.jmbg = value; } }
     }
 }
