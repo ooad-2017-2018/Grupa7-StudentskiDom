@@ -95,10 +95,18 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Klase\Admin.cs" />
+    <Compile Include="Klase\Blagajnik.cs" />
+    <Compile Include="Klase\Konobar.cs" />
+    <Compile Include="Klase\Majstor.cs" />
+    <Compile Include="Klase\SefRestorana.cs" />
+    <Compile Include="Klase\Student.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Klase\Osoba.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Klase\Uposlenik.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
