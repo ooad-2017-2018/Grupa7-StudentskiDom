@@ -47,7 +47,8 @@ namespace ProjekatStudentskiDom
                 {
                     if (o is Admin)
                     {
-                        Frame.Navigate(typeof(AdminPage), sd);
+                        Page ap = new AdminPage(sd);
+                        this.Content = ap;
                     }
                     if(o is Student)
                     {
