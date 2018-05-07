@@ -47,11 +47,11 @@ namespace ProjekatStudentskiDom
                 {
                     if (o is Admin)
                     {
-                        Frame.Navigate(typeof(AdminPanel));
+                        Frame.Navigate(typeof(AdminPage), sd);
                     }
                     if(o is Student)
                     {
-                        
+                        Frame.Navigate(typeof(StudentPage));
                     }
                 }
             }

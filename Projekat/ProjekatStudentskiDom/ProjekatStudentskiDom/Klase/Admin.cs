@@ -9,7 +9,7 @@ namespace ProjekatStudentskiDom.Klase
     public class Admin : Osoba
     {
 
-        public Admin(string ime, string prezime, string datumRodjenja, string username, string password) : base(ime,prezime,datumRodjenja,username,password)
+        public Admin(string ime, string prezime, string datumRodjenja, string username, string password, char pol) : base(ime,prezime,datumRodjenja,username,password,pol)
         {
 
         }

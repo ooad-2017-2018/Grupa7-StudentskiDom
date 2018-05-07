@@ -13,16 +13,17 @@ namespace ProjekatStudentskiDom {
         protected string username;
         protected string password;
         protected string jmbg;
+        protected char pol;
 
 
-
-        protected Osoba(string ime, string prezime, string datumRodjenja, string username, string password)
+        protected Osoba(string ime, string prezime, string datumRodjenja, string username, string password, char pol)
         {
             this.ime = ime;
             this.prezime = prezime;
             this.datumRodjenja = datumRodjenja;
             this.username = username;
             this.password = password;
+            this.pol = pol;
         }
 
         public string Ime { get { return ime; } set { this.ime = value; } }
@@ -31,5 +32,6 @@ namespace ProjekatStudentskiDom {
         public string Username { get { return username; } set { this.username = value; } }
         public string Password { get { return password; } set { this.password = value; } }
         public string Jmbg { get { return jmbg; } set { this.jmbg = value; } }
+        public char Pol { get { return pol; } set { this.pol = value; } }
     }
 }

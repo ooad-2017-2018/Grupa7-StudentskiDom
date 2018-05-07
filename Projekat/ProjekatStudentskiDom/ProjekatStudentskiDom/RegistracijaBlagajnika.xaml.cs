@@ -20,13 +20,11 @@ namespace ProjekatStudentskiDom
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class AdminPanel : Page
+    public sealed partial class RegistracijaBlagajnika : Page
     {
-        public AdminPanel()
+        public RegistracijaBlagajnika()
         {
             this.InitializeComponent();
-            listaNovosti.Items.Add("Požar na sedmom spratu usmrtio troje ljudi. A.O. (1996), N.R. (1997) i A.K. (1997) su smrtno stradali");
-            listaNovosti.Items.Add("Dajana Mojsilović izbačena iz doma zbog nepoštivanja pravila i kodeksa ponašanja.");
         }
     }
 }

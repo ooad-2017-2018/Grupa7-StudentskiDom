@@ -14,7 +14,7 @@ namespace ProjekatStudentskiDom.Klase
         private string kanton;
         private int studentID;
 
-        public Student(string ime, string prezime, string datumRodjenja, string username, string password, int brojSobe, bool teretana, string kanton) : base(ime,prezime,datumRodjenja,username,password)
+        public Student(string ime, string prezime, string datumRodjenja, string username, string password, char pol, int brojSobe, bool teretana, string kanton) : base(ime,prezime,datumRodjenja,username,password,pol)
         {
             studentID = id;
             id++;
