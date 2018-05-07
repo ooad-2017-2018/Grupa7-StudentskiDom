@@ -23,18 +23,18 @@
             <ColumnDefinition Width="3*"></ColumnDefinition>
             <ColumnDefinition Width="3*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <RadioButton Content="Blagajnik" FontSize="30" HorizontalAlignment="Left" Margin="69,457,-217,-503" VerticalAlignment="Top" Height="46" Width="148" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
-        <RadioButton Content="Majstor" FontSize="30" HorizontalAlignment="Left" Margin="69,189,0,0" VerticalAlignment="Top" Height="46" Width="129"/>
-        <RadioButton Content="Konobar" FontSize="30" HorizontalAlignment="Left" Margin="69,249,0,0" VerticalAlignment="Top" Height="46" Width="141"/>
-        <RadioButton Content="Sef restorana" FontSize="30" HorizontalAlignment="Left" Margin="68,325,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.507,0.5" Height="46" Width="202"/>
-        <RadioButton Content="Kuhar" FontSize="30" HorizontalAlignment="Left" Margin="68,389,0,0" VerticalAlignment="Top" Height="46" Width="120"/>
-        <RadioButton Content="Ostali" FontSize="30" HorizontalAlignment="Left" Margin="68,586,-188,-632" VerticalAlignment="Top" Height="46" Width="120" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
-        <Button Content="Registruj" FontSize="35" HorizontalAlignment="Left" Margin="71,95,0,0" VerticalAlignment="Top" Height="77" Width="198" Click="Button_Click" Grid.Row="1"/>
-        <Button Content="Pregled" FontSize="35" HorizontalAlignment="Left" Margin="384,100,0,0" VerticalAlignment="Top" Height="77" Width="205" Grid.Row="1"/>
+        <RadioButton x:Name="blagajnik" Content="Blagajnik" FontSize="30" HorizontalAlignment="Left" Margin="69,457,-217,-503" VerticalAlignment="Top" Height="46" Width="148" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <RadioButton x:Name="majstor" Content="Majstor" FontSize="30" HorizontalAlignment="Left" Margin="69,189,0,0" VerticalAlignment="Top" Height="46" Width="129"/>
+        <RadioButton x:Name="konobar" Content="Konobar" FontSize="30" HorizontalAlignment="Left" Margin="69,249,0,0" VerticalAlignment="Top" Height="46" Width="141"/>
+        <RadioButton x:Name="sefRestorana" Content="Sef restorana" FontSize="30" HorizontalAlignment="Left" Margin="68,325,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.507,0.5" Height="46" Width="202"/>
+        <RadioButton x:Name="kuhar" Content="Kuhar" FontSize="30" HorizontalAlignment="Left" Margin="68,389,0,0" VerticalAlignment="Top" Height="46" Width="120"/>
+        <RadioButton x:Name="ostali" Content="Ostali" FontSize="30" HorizontalAlignment="Left" Margin="68,586,-188,-632" VerticalAlignment="Top" Height="46" Width="120" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <Button x:Name="registracija" Content="Registruj" FontSize="35" HorizontalAlignment="Left" Margin="71,95,0,0" VerticalAlignment="Top" Height="77" Width="198" Click="registracija_Click" Grid.Row="1"/>
+        <Button x:Name="pregled" Content="Pregled" FontSize="35" HorizontalAlignment="Left" Margin="384,100,0,0" VerticalAlignment="Top" Height="77" Width="205" Grid.Row="1" Click="pregled_Click"/>
         <ListView x:Name="listaNovosti" HorizontalAlignment="Left" Height="450" Margin="78,269,-690,-719" VerticalAlignment="Top" Width="612" IsSynchronizedWithCurrentItem="False" Grid.Column="1" Grid.RowSpan="2"/>
         <Button Content="Dodaj novost" FontSize="30" HorizontalAlignment="Left" Margin="310,109,0,0" VerticalAlignment="Top" Height="72" Width="203" Grid.Column="1" Grid.Row="1"/>
         <TextBlock HorizontalAlignment="Left" Margin="78,157,-335,-209" FontSize="30" Text="Novosti" TextWrapping="Wrap" VerticalAlignment="Top" Height="52" Width="257" Grid.Column="1" Grid.RowSpan="2"/>
-        <RadioButton Content="Student" FontSize="30" HorizontalAlignment="Left" Margin="68,524,-199,-570" VerticalAlignment="Top" IsChecked="True" Height="46" Width="131" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <RadioButton x:Name="student" Content="Student" FontSize="30" HorizontalAlignment="Left" Margin="68,524,-199,-570" VerticalAlignment="Top" IsChecked="True" Height="46" Width="131" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
         <TextBlock x:Name="dobrodosaoAdmin" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="72,32,-762,-124" Grid.RowSpan="2" TextWrapping="Wrap" VerticalAlignment="Top" Height="92" Width="690" FontSize="36" FontStyle="Italic" FontWeight="Bold"/>
     </Grid>
 </Page>

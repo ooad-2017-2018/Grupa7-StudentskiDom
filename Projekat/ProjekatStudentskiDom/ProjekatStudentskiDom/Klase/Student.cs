@@ -35,5 +35,10 @@ namespace ProjekatStudentskiDom.Klase
             return kanton;
         }
 
+        public override string ToString()
+        {
+            return base.ToString()+", soba: "+brojSobe.ToString()+", kanton: "+kanton;
+        }
+
     }
 }

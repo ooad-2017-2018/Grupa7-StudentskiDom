@@ -7,7 +7,13 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d" Width="1585.546">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,0,6,0">
+    <Grid Margin="0,1,6,4">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="#FF00B9FF" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="3*"></RowDefinition>
             <RowDefinition Height="3*"></RowDefinition>
@@ -18,24 +24,26 @@
             <RowDefinition Height="3*"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="3*"></ColumnDefinition>
-            <ColumnDefinition Width="3*"></ColumnDefinition>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="3*"/>
         </Grid.ColumnDefinitions>
-        <TextBlock Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="120,50,-182,-70" Grid.RowSpan="7" Text="Ime:" FontSize="35" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBox Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="316,45,-646,-97" Grid.RowSpan="7" FontSize="35" VerticalAlignment="Top" Height="52" Width="330"/>
-        <TextBox HorizontalAlignment="Left" Margin="317,190,-647,-242" FontSize="35" VerticalAlignment="Top" Height="52" Width="330" Grid.ColumnSpan="2" Grid.RowSpan="7"/>
-        <TextBox HorizontalAlignment="Left" Margin="315,188,-645,-240" FontSize="35" VerticalAlignment="Top" Height="52" Width="330" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="6"/>
-        <TextBox HorizontalAlignment="Left" Margin="318,194,-648,-246" FontSize="35" VerticalAlignment="Top" Height="52" Width="330" Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="5"/>
-        <PasswordBox HorizontalAlignment="Left" Margin="318,198,-648,-250" FontSize="35" VerticalAlignment="Top" Height="52" Width="330" Grid.Row="3" Grid.ColumnSpan="2" Grid.RowSpan="4"/>
-        <TextBlock HorizontalAlignment="Left" Margin="98,191,-228,-238" Text="Prezime:" FontSize="35" TextWrapping="Wrap" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.RowSpan="7"/>
-        <TextBlock HorizontalAlignment="Left" Margin="129,186,-225,-233" Text="JMBG:" FontSize="35" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="6"/>
-        <TextBlock HorizontalAlignment="Left" Margin="54,195,-286,-242" Text="Korisničko ime:" FontSize="35" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="5"/>
-        <TextBlock HorizontalAlignment="Left" Margin="102,198,-254,-245" Text="Password:" FontSize="35" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="3" Grid.ColumnSpan="2" Grid.RowSpan="4"/>
-        <TextBlock HorizontalAlignment="Left" Margin="115,196,-233,-243" Text="Kanton:" FontSize="35" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="4" Grid.ColumnSpan="2" Grid.RowSpan="3"/>
-        <Button Content="Registruj" FontSize="30" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="586,903,-734,-960" Grid.RowSpan="7" VerticalAlignment="Top" Height="57" Width="148"/>
-        <ComboBox Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="330,761,-645,-820" Grid.RowSpan="7" VerticalAlignment="Top" Height="59" Width="315"/>
-        <TextBlock HorizontalAlignment="Left" Margin="811,42,-929,-89" Text="Soba:" FontSize="35" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="5" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
-        <Button Content="Spisak soba" FontSize="30" HorizontalAlignment="Left" Margin="1239,-96,-1428,0" VerticalAlignment="Top" Height="57" Width="189" Grid.Row="6" Grid.ColumnSpan="2"/>
-        <TextBox Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="947,749,-1176,-811" Grid.RowSpan="7" FontSize="35" VerticalAlignment="Top" Height="62" Width="229"/>
+        <TextBlock HorizontalAlignment="Left" Margin="120,50,0,0" Text="Ime:" FontSize="35" TextWrapping="Wrap" VerticalAlignment="Top" Height="47" Width="65"/>
+        <TextBox x:Name="ime" HorizontalAlignment="Left" Margin="316,45,0,0" FontSize="35" VerticalAlignment="Top" Height="52" Width="330"/>
+        <TextBox x:Name="prezime" HorizontalAlignment="Left" Margin="317,47,0,0" FontSize="35" VerticalAlignment="Top" Height="52" Width="330" Grid.Row="1"/>
+        <TextBox x:Name="jmbg" HorizontalAlignment="Left" Margin="315,45,0,0" FontSize="35" VerticalAlignment="Top" Height="52" Width="330" Grid.Row="2"/>
+        <TextBox x:Name="username" HorizontalAlignment="Left" Margin="318,51,0,0" FontSize="35" VerticalAlignment="Top" Height="52" Width="330" Grid.Row="3"/>
+        <PasswordBox x:Name="password" HorizontalAlignment="Left" Margin="318,55,0,0" FontSize="35" VerticalAlignment="Top" Height="52" Width="330" Grid.Row="4"/>
+        <TextBlock HorizontalAlignment="Left" Margin="98,48,0,0" Text="Prezime:" FontSize="35" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="1" Height="47" Width="130"/>
+        <TextBlock HorizontalAlignment="Left" Margin="129,43,0,0" Text="JMBG:" FontSize="35" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="2" Height="47" Width="96"/>
+        <TextBlock HorizontalAlignment="Left" Margin="54,52,0,0" Text="Korisničko ime:" FontSize="35" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="3" Height="47" Width="232"/>
+        <TextBlock HorizontalAlignment="Left" Margin="102,55,0,0" Text="Password:" FontSize="35" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="4" Height="47" Width="152"/>
+        <TextBlock HorizontalAlignment="Left" Margin="115,53,0,0" Text="Kanton:" FontSize="35" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="5" Height="47" Width="118"/>
+        <Button x:Name="registruj" Content="Registruj" FontSize="30" HorizontalAlignment="Left" Margin="586,45,0,0" VerticalAlignment="Top" Height="57" Width="148" Grid.Row="6" Click="registruj_Click"/>
+        <ComboBox x:Name="kanton" HorizontalAlignment="Left" Margin="330,46,0,0" VerticalAlignment="Top" Height="59" Width="315" Grid.Row="5" SelectedIndex="0"/>
+        <TextBlock HorizontalAlignment="Left" Margin="21,42,0,0" Text="Soba:" FontSize="35" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="5" Grid.Column="1" Height="47" Width="85"/>
+        <TextBox x:Name="soba" HorizontalAlignment="Left" Margin="157,34,0,0" FontSize="35" VerticalAlignment="Top" Height="62" Width="229" Grid.Column="1" Grid.Row="5"/>
+        <RadioButton x:Name="radioButtonM" Content="Muški" HorizontalAlignment="Left" Margin="138,29,-332,-97" VerticalAlignment="Top" Height="68" Width="194" FontSize="36" Grid.Column="1" Grid.Row="4" IsChecked="True" Grid.ColumnSpan="2" Grid.RowSpan="3"/>
+        <RadioButton x:Name="radioButtonZ" Content="Ženski" HorizontalAlignment="Left" Margin="415,32,-609,-100" VerticalAlignment="Top" Height="68" Width="194" FontSize="36" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="2" Grid.RowSpan="3"/>
+        <Button x:Name="otkazi" Content="Otkaži" FontSize="30" HorizontalAlignment="Left" Margin="854,47,-1002,-104" VerticalAlignment="Top" Height="57" Width="148" Grid.Row="6" Click="registruj_Click" Grid.ColumnSpan="3"/>
     </Grid>
 </Page>

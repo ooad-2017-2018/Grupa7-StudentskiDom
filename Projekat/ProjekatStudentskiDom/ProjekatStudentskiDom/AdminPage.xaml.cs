@@ -28,7 +28,7 @@ namespace ProjekatStudentskiDom
         {
             this.InitializeComponent();
             this.sd = sd;
-            if(sd.dajAdmina().Pol=='M')
+            if (sd.dajAdmina().Pol == 'M')
             {
                 dobrodosaoAdmin.Text = "Dobrodošao, " + sd.dajAdmina().Ime + "e!";
             }
@@ -40,9 +40,19 @@ namespace ProjekatStudentskiDom
             listaNovosti.Items.Add("Dajana Mojsilović izbačena iz doma zbog nepoštivanja pravila i kodeksa ponašanja.");
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void pregled_Click(object sender, RoutedEventArgs e)
         {
-            
+            Page adminPregled = new AdminPregledClanova(sd);
+            this.Content = adminPregled;
+        }
+
+        private void registracija_Click(object sender, RoutedEventArgs e)
+        {
+            if (student.IsEnabled)
+            {
+                Page studentRegistracija = new RegistracijaStudenta(sd);
+                this.Content = studentRegistracija;
+            }
         }
     }
 }

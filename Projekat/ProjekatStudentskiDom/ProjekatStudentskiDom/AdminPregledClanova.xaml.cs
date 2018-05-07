@@ -21,13 +21,30 @@ namespace ProjekatStudentskiDom
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class StudentPage : Page
+    public sealed partial class AdminPregledClanova : Page
     {
         StudentskiDom sd;
-        public StudentPage(StudentskiDom sd)
+        public AdminPregledClanova(StudentskiDom sd)
         {
             this.InitializeComponent();
             this.sd = sd;
+
+            ispisiStudente();
+        }
+
+        private void ispisiStudente()
+        {
+            List<Student> s=sd.dajStudente();
+            foreach(Student student in s)
+            {
+                studenti.Items.Add(student.ToString());
+            }
+        }
+
+        private void nazad_Click(object sender, RoutedEventArgs e)
+        {
+            Page adminPage = new AdminPage(sd);
+            this.Content = adminPage;
         }
     }
 }

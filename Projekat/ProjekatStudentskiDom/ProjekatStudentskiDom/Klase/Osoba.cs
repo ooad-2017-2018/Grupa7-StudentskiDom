@@ -33,5 +33,10 @@ namespace ProjekatStudentskiDom {
         public string Password { get { return password; } set { this.password = value; } }
         public string Jmbg { get { return jmbg; } set { this.jmbg = value; } }
         public char Pol { get { return pol; } set { this.pol = value; } }
+
+        public override string ToString()
+        {
+            return ime+" "+prezime+", datum rođenja: "+datumRodjenja+", username: "+username+", password: "+password;
+        }
     }
 }

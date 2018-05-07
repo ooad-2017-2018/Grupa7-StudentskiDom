@@ -95,6 +95,9 @@
     <Compile Include="AdminPage.xaml.cs">
       <DependentUpon>AdminPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AdminPregledClanova.xaml.cs">
+      <DependentUpon>AdminPregledClanova.xaml</DependentUpon>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
@@ -114,6 +117,9 @@
     <Compile Include="Klase\Uposlenik.cs" />
     <Compile Include="RegistracijaBlagajnika.xaml.cs">
       <DependentUpon>RegistracijaBlagajnika.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RegistracijaStudenta.xaml.cs">
+      <DependentUpon>RegistracijaStudenta.xaml</DependentUpon>
     </Compile>
     <Compile Include="StudentPage.xaml.cs">
       <DependentUpon>StudentPage.xaml</DependentUpon>
@@ -142,6 +148,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="AdminPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AdminPregledClanova.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
