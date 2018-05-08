@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using ProjekatStudentskiDom.Klase;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -22,9 +23,16 @@ namespace ProjekatStudentskiDom
     /// </summary>
     public sealed partial class RegistracijaBlagajnika : Page
     {
-        public RegistracijaBlagajnika()
+        StudentskiDom sd;
+        public RegistracijaBlagajnika(StudentskiDom sd)
         {
             this.InitializeComponent();
+            this.sd = sd;
+        }
+
+        private void registruj_Click(object sender, RoutedEventArgs e)
+        {
+            sd.dodajBlagajnika(ime.Text,prezime.Text,datumRodjenja.Text,username.Text,password.Password)
         }
     }
 }

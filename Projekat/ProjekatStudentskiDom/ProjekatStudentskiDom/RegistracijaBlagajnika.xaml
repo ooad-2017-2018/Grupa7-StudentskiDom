@@ -29,17 +29,20 @@
             <ColumnDefinition Width="3*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <TextBlock Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="120,50,-182,-70" Grid.RowSpan="7" Text="Ime:" FontSize="35" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBox Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="316,45,-646,-97" Grid.RowSpan="7" FontSize="35" VerticalAlignment="Top" Height="52" Width="330"/>
-        <TextBox HorizontalAlignment="Left" Margin="317,190,-647,-242" FontSize="35" VerticalAlignment="Top" Height="52" Width="330" Grid.ColumnSpan="2" Grid.RowSpan="7"/>
-        <TextBox HorizontalAlignment="Left" Margin="315,188,-645,-240" FontSize="35" VerticalAlignment="Top" Height="52" Width="330" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="6"/>
-        <TextBox HorizontalAlignment="Left" Margin="318,194,-648,-246" FontSize="35" VerticalAlignment="Top" Height="52" Width="330" Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="5"/>
-        <PasswordBox HorizontalAlignment="Left" Margin="318,198,-648,-250" FontSize="35" VerticalAlignment="Top" Height="52" Width="330" Grid.Row="3" Grid.ColumnSpan="2" Grid.RowSpan="4"/>
-        <TextBox HorizontalAlignment="Left" Margin="318,345,-648,-397" FontSize="35" VerticalAlignment="Top" Height="52" Width="330" Grid.Row="3" Grid.ColumnSpan="2" Grid.RowSpan="4"/>
+        <TextBox x:Name="ime" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="316,45,-646,-97" Grid.RowSpan="7" FontSize="35" VerticalAlignment="Top" Height="52" Width="330"/>
+        <TextBox x:Name="prezime" HorizontalAlignment="Left" Margin="317,190,-647,-242" FontSize="35" VerticalAlignment="Top" Height="52" Width="330" Grid.ColumnSpan="2" Grid.RowSpan="7"/>
+        <TextBox x:Name="racun" HorizontalAlignment="Left" Margin="315,188,-645,-240" FontSize="35" VerticalAlignment="Top" Height="52" Width="330" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="6"/>
+        <TextBox x:Name="username" HorizontalAlignment="Left" Margin="318,194,-648,-246" FontSize="35" VerticalAlignment="Top" Height="52" Width="330" Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="5"/>
+        <PasswordBox x:Name="password" HorizontalAlignment="Left" Margin="318,198,-648,-250" FontSize="35" VerticalAlignment="Top" Height="52" Width="330" Grid.Row="3" Grid.ColumnSpan="2" Grid.RowSpan="4"/>
+        <TextBox x:Name="plata" HorizontalAlignment="Left" Margin="318,345,-648,-397" FontSize="35" VerticalAlignment="Top" Height="52" Width="330" Grid.Row="3" Grid.ColumnSpan="2" Grid.RowSpan="4"/>
         <TextBlock HorizontalAlignment="Left" Margin="98,191,-228,-238" Text="Prezime:" FontSize="35" TextWrapping="Wrap" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.RowSpan="7"/>
         <TextBlock HorizontalAlignment="Left" Margin="41,190,-285,-237" Text="Bankovni račun:" FontSize="35" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="6"/>
         <TextBlock HorizontalAlignment="Left" Margin="54,195,-286,-242" Text="Korisničko ime:" FontSize="35" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="5"/>
         <TextBlock HorizontalAlignment="Left" Margin="102,198,-254,-245" Text="Password:" FontSize="35" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="3" Grid.ColumnSpan="2" Grid.RowSpan="4"/>
         <TextBlock HorizontalAlignment="Left" Margin="147,205,-230,-252" Text="Plata:" FontSize="35" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="4" Grid.ColumnSpan="2" Grid.RowSpan="3"/>
-        <Button Content="Registruj" FontSize="30" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="586,903,-734,-960" Grid.RowSpan="7" VerticalAlignment="Top" Height="57" Width="148"/>
+        <Button x:Name="registruj" Content="Registruj" FontSize="30" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="586,903,-734,-960" Grid.RowSpan="7" VerticalAlignment="Top" Height="57" Width="148" Click="registruj_Click"/>
+        <TextBox x:Name="datumRodjenja" HorizontalAlignment="Left" Margin="1042,65,-1372,-117" FontSize="35" VerticalAlignment="Top" Height="52" Width="330" Grid.Row="5" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <TextBlock HorizontalAlignment="Left" Margin="776,68,-1015,-115" Text="Datum rođenja:" FontSize="35" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="5" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <Button x:Name="otkazi" Content="Otkaži" FontSize="30" HorizontalAlignment="Left" Margin="56,49,0,0" VerticalAlignment="Top" Width="148" Click="registruj_Click" Grid.Row="6" Grid.Column="1" Height="57"/>
     </Grid>
 </Page>
