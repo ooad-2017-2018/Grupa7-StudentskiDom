@@ -31,7 +31,7 @@ namespace ProjekatStudentskiDom
         {
             this.InitializeComponent();
             sd = new StudentskiDom();
-            
+            sd.dodajKuhara("Ahmed", "Oruc", "05.09.1996", "xxxCSGOOneTapHeadshotMasterBRNDDVCxxx", "berinaljubawnajwishe11104ever", 'Z', -5, "4254675");
         }
 
         private void loginButton_Click(object sender, RoutedEventArgs e)

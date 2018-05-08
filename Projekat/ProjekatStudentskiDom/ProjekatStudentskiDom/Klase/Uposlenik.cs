@@ -30,5 +30,10 @@ namespace ProjekatStudentskiDom
         {
             return bankovniRacun;
         }
+
+        public override string ToString()
+        {
+            return base.ToString()+", plata: "+plata.ToString()+", bankovni račun: "+bankovniRacun;
+        }
     }
 }

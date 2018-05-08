@@ -19,5 +19,10 @@ namespace ProjekatStudentskiDom.Klase
         {
             return tipMajstora;
         }
+
+        public override string ToString()
+        {
+            return base.ToString()+", tip: "+tipMajstora;
+        }
     }
 }

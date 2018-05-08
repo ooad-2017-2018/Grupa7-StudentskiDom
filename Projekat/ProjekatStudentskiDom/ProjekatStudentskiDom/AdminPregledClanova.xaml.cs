@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using ProjekatStudentskiDom.Klase;
+using Windows.UI.Popups;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -29,15 +30,21 @@ namespace ProjekatStudentskiDom
             this.InitializeComponent();
             this.sd = sd;
 
-            ispisiStudente();
+            upisiUListe();
         }
 
-        private void ispisiStudente()
+        private void upisiUListe()
         {
             List<Student> s=sd.dajStudente();
             foreach(Student student in s)
             {
                 studenti.Items.Add(student.ToString());
+            }
+
+            List<Uposlenik> u = sd.dajUposlenike();
+            foreach(Uposlenik uposlenik in u)
+            {
+                uposlenici.Items.Add(uposlenik.ToString());
             }
         }
 
@@ -45,6 +52,12 @@ namespace ProjekatStudentskiDom
         {
             Page adminPage = new AdminPage(sd);
             this.Content = adminPage;
+        }
+
+        private async void uposlenici_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var dialog = new MessageDialog(e.ToString());
+            await dialog.ShowAsync();
         }
     }
 }
