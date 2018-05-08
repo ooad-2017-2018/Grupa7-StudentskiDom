@@ -32,7 +32,7 @@ namespace ProjekatStudentskiDom
 
         private void registruj_Click(object sender, RoutedEventArgs e)
         {
-            sd.dodajBlagajnika(ime.Text,prezime.Text,datumRodjenja.Text,username.Text,password.Password)
+            sd.dodajBlagajnika(ime.Text, prezime.Text, datumRodjenja.Text, username.Text, password.Password,'M',300,"aaa");
         }
     }
 }

@@ -28,10 +28,10 @@ namespace ProjekatStudentskiDom
         {
             this.InitializeComponent();
             this.sd = sd;
-            dodajKantone();
+            dodajUCombo();
         }
 
-        private void dodajKantone()
+        private void dodajUCombo()
         {
             kanton.Items.Add("KS");
             kanton.Items.Add("SBK");
@@ -46,6 +46,16 @@ namespace ProjekatStudentskiDom
             kanton.Items.Add("RS");
             kanton.Items.Add("Brčko D");
             kanton.SelectedIndex = 0;
+
+            pol.Items.Add("Muški");
+            pol.Items.Add("Ženski");
+            pol.SelectedIndex = 0;
+        }
+
+        private void otkazi_Click(object sender, RoutedEventArgs e)
+        {
+            Page adminPage = new AdminPage(sd);
+            this.Content = adminPage;
         }
 
         private void registruj_Click(object sender, RoutedEventArgs e)
@@ -53,9 +63,13 @@ namespace ProjekatStudentskiDom
             String dan = jmbg.Text.Substring(0, 2);
             String mjesec = jmbg.Text.Substring(2, 2);
             String godina = "1" + jmbg.Text.Substring(4, 3);
-            char pol = 'M';
-            if (radioButtonZ.IsEnabled) pol = 'Z';
-            sd.dodajStudenta(ime.Text, prezime.Text, dan + "." + mjesec + "." + godina, username.Text, password.Password, pol, Int32.Parse(soba.Text), true, (string)kanton.SelectedItem);
+            char p;
+            if ((string)pol.SelectedItem == "Muški") p = 'M';
+            else p = 'Z';
+            bool t;
+            if (teretana.IsChecked == true) t = true;
+            else t = false;
+            sd.dodajStudenta(ime.Text, prezime.Text, dan + "." + mjesec + "." + godina, username.Text, password.Password, p, Int32.Parse(soba.Text), t, (string)kanton.SelectedItem);
             Page adminPage = new AdminPage(sd);
             this.Content = adminPage;
         }
