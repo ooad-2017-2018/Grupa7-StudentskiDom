@@ -18,12 +18,8 @@
         </Grid.ColumnDefinitions>
         <TextBlock Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="286,41,-542,-120" Grid.RowSpan="2" Text="Studenti" TextWrapping="Wrap" VerticalAlignment="Top" Height="79" Width="256" FontSize="48"/>
         <TextBlock HorizontalAlignment="Left" Margin="988,38,-1244,-117" Text="Uposlenici" TextWrapping="Wrap" VerticalAlignment="Top" Height="79" Width="256" FontSize="48" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
-        <ListView x:Name="uposlenici" HorizontalAlignment="Left" Height="811" Margin="26,35,0,0" VerticalAlignment="Top" Width="708" ItemClick="uposlenici_ItemClick" Grid.Column="1" Grid.Row="1">
-            <Popup>
-                <Grid x:Name="popup" Background="#FFE5E5E5"/>
-            </Popup>
-        </ListView>
-        <ListView x:Name="studenti" HorizontalAlignment="Left" Height="811" Margin="26,35,0,0" VerticalAlignment="Top" Width="708" Grid.Row="1"/>
+        <ListView x:Name="uposlenici" HorizontalAlignment="Left" Height="756" Margin="35,43,0,0" VerticalAlignment="Top" Width="658" Grid.Column="1" Grid.Row="1"/>
+        <ListView x:Name="studenti" HorizontalAlignment="Left" Margin="35,43,0,0" Width="658" Grid.Row="1" Height="756" VerticalAlignment="Top"/>
         <Button x:Name="nazad" Content="Povratak" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="646,41,-854,-106" Grid.RowSpan="2" VerticalAlignment="Top" Height="65" Width="208" FontSize="36" Click="nazad_Click"/>
     </Grid>
 </Page>

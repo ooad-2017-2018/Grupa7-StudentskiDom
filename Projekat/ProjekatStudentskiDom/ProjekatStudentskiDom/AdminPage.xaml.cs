@@ -38,6 +38,12 @@ namespace ProjekatStudentskiDom
             }
             listaNovosti.Items.Add("Požar na sedmom spratu usmrtio troje ljudi. A.O. (1996), N.R. (1997) i A.K. (1997) su smrtno stradali");
             listaNovosti.Items.Add("Dajana Mojsilović izbačena iz doma zbog nepoštivanja pravila i kodeksa ponašanja.");
+            comboUposlenici.Items.Add("Blagajnik");
+            comboUposlenici.Items.Add("Kuhar");
+            comboUposlenici.Items.Add("Šef restorana");
+            comboUposlenici.Items.Add("Konobar");
+            comboUposlenici.Items.Add("Majstor");
+            comboUposlenici.SelectedIndex = 0;
         }
 
         private void pregled_Click(object sender, RoutedEventArgs e)
@@ -48,11 +54,68 @@ namespace ProjekatStudentskiDom
 
         private void registracija_Click(object sender, RoutedEventArgs e)
         {
-            if (student.IsEnabled)
+            if (student.IsChecked==true)
             {
                 Page studentRegistracija = new RegistracijaStudenta(sd);
                 this.Content = studentRegistracija;
             }
+            else
+            {
+                if((string)comboUposlenici.SelectedItem=="Blagajnik")
+                {
+                    Page blagajnikRegistracija = new RegistracijaBlagajnika(sd);
+                    this.Content = blagajnikRegistracija;
+                }
+
+                if ((string)comboUposlenici.SelectedItem == "Kuhar")
+                {
+                    Page kuharRegistracija = new RegistracijaKuhara(sd);
+                    this.Content = kuharRegistracija;
+                }
+
+                if ((string)comboUposlenici.SelectedItem == "Šef restorana")
+                {
+                    Page sefRestorana = new RegistracijaSefaRestorana(sd);
+                    this.Content = sefRestorana;
+                }
+
+                if ((string)comboUposlenici.SelectedItem == "Konobar")
+                {
+                    Page konobarRegistracija = new RegistracijaKonobara(sd);
+                    this.Content = konobarRegistracija;
+                }
+
+                if ((string)comboUposlenici.SelectedItem == "Majstor")
+                {
+                    Page majstorRegistracija = new RegistracijaMajstora(sd);
+                    this.Content = majstorRegistracija;
+                }
+            }
+        }
+
+        private void dodajNovost_Click(object sender, RoutedEventArgs e)
+        {
+            if(novostText.Text.Length>0)
+            {
+                listaNovosti.Items.Add(novostText.Text);
+                novostText.Text = "";
+            }
+        }
+
+        private void odjava_Click(object sender, RoutedEventArgs e)
+        {
+            Page main = new MainPage(sd);
+            this.Content = main;
+        }
+
+        private void blagajnik_Click(object sender, RoutedEventArgs e)
+        {
+            comboUposlenici.IsEnabled = true;
+        }
+
+        private void student_Click(object sender, RoutedEventArgs e)
+        {
+            comboUposlenici.IsEnabled = false;
         }
     }
 }

@@ -23,19 +23,17 @@
             <ColumnDefinition Width="3*"></ColumnDefinition>
             <ColumnDefinition Width="3*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <RadioButton x:Name="blagajnik" Content="Blagajnik" FontSize="30" HorizontalAlignment="Left" Margin="69,457,-217,-503" VerticalAlignment="Top" Height="46" Width="148" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
-        <RadioButton x:Name="majstor" Content="Majstor" FontSize="30" HorizontalAlignment="Left" Margin="69,189,0,0" VerticalAlignment="Top" Height="46" Width="129"/>
-        <RadioButton x:Name="konobar" Content="Konobar" FontSize="30" HorizontalAlignment="Left" Margin="69,249,0,0" VerticalAlignment="Top" Height="46" Width="141"/>
-        <RadioButton x:Name="sefRestorana" Content="Sef restorana" FontSize="30" HorizontalAlignment="Left" Margin="68,325,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.507,0.5" Height="46" Width="202"/>
-        <RadioButton x:Name="kuhar" Content="Kuhar" FontSize="30" HorizontalAlignment="Left" Margin="68,389,0,0" VerticalAlignment="Top" Height="46" Width="120"/>
-        <RadioButton x:Name="ostali" Content="Ostali" FontSize="30" HorizontalAlignment="Left" Margin="68,586,-188,-632" VerticalAlignment="Top" Height="46" Width="120" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <RadioButton x:Name="uposlenik" Content="Uposlenik" FontSize="30" HorizontalAlignment="Left" Margin="78,259,-223,-305" VerticalAlignment="Top" Height="46" Width="148" Grid.ColumnSpan="2" Grid.RowSpan="2" Click="blagajnik_Click"/>
         <Button x:Name="registracija" Content="Registruj" FontSize="35" HorizontalAlignment="Left" Margin="71,95,0,0" VerticalAlignment="Top" Height="77" Width="198" Click="registracija_Click" Grid.Row="1"/>
         <Button x:Name="pregled" Content="Pregled" FontSize="35" HorizontalAlignment="Left" Margin="384,100,0,0" VerticalAlignment="Top" Height="77" Width="205" Grid.Row="1" Click="pregled_Click"/>
         <ListView x:Name="listaNovosti" HorizontalAlignment="Left" Height="450" Margin="78,269,-690,-719" VerticalAlignment="Top" Width="612" IsSynchronizedWithCurrentItem="False" Grid.Column="1" Grid.RowSpan="2"/>
-        <Button Content="Dodaj novost" FontSize="30" HorizontalAlignment="Left" Margin="310,109,0,0" VerticalAlignment="Top" Height="72" Width="203" Grid.Column="1" Grid.Row="1"/>
+        <Button x:Name="dodajNovost" Content="Dodaj novost" FontSize="30" HorizontalAlignment="Left" Margin="310,109,0,0" VerticalAlignment="Top" Height="72" Width="203" Grid.Column="1" Grid.Row="1" Click="dodajNovost_Click"/>
         <TextBlock HorizontalAlignment="Left" Margin="78,157,-335,-209" FontSize="30" Text="Novosti" TextWrapping="Wrap" VerticalAlignment="Top" Height="52" Width="257" Grid.Column="1" Grid.RowSpan="2"/>
-        <RadioButton x:Name="student" Content="Student" FontSize="30" HorizontalAlignment="Left" Margin="68,524,-199,-570" VerticalAlignment="Top" IsChecked="True" Height="46" Width="131" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <RadioButton x:Name="student" Content="Student" FontSize="30" HorizontalAlignment="Left" Margin="80,425,-211,-471" VerticalAlignment="Top" IsChecked="True" Height="46" Width="131" Grid.ColumnSpan="2" Grid.RowSpan="2" Click="student_Click"/>
         <TextBlock x:Name="dobrodosaoAdmin" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="72,32,-762,-124" Grid.RowSpan="2" TextWrapping="Wrap" VerticalAlignment="Top" Height="92" Width="690" FontSize="36" FontStyle="Italic" FontWeight="Bold"/>
         <TextBlock HorizontalAlignment="Left" Margin="163,38,0,0" TextWrapping="Wrap" Width="499" Grid.Column="1" Grid.Row="1" Height="63" VerticalAlignment="Top"/>
+        <TextBox x:Name="novostText" HorizontalAlignment="Left" Margin="166,0,0,160" Text="" Width="465" Grid.Column="1" Grid.Row="1" Height="56" VerticalAlignment="Bottom"/>
+        <Button x:Name="odjava" Content="Odjava" HorizontalAlignment="Left" Margin="21,156,-208,-210" VerticalAlignment="Top" Click="odjava_Click" Grid.Column="1" Grid.Row="1" Height="54" Width="187" FontSize="20"/>
+        <ComboBox x:Name="comboUposlenici" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="105,331,-364,-388" Grid.RowSpan="2" VerticalAlignment="Top" Height="57" Width="259" IsEnabled="False"/>
     </Grid>
 </Page>

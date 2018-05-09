@@ -56,6 +56,7 @@ namespace ProjekatStudentskiDom
         {
             Page adminPage = new AdminPage(sd);
             this.Content = adminPage;
+            
         }
 
         private void registruj_Click(object sender, RoutedEventArgs e)

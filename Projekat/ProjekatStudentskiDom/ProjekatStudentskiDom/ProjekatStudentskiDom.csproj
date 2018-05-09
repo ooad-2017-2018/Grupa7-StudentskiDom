@@ -118,6 +118,18 @@
     <Compile Include="RegistracijaBlagajnika.xaml.cs">
       <DependentUpon>RegistracijaBlagajnika.xaml</DependentUpon>
     </Compile>
+    <Compile Include="RegistracijaKonobara.xaml.cs">
+      <DependentUpon>RegistracijaKonobara.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RegistracijaKuhara.xaml.cs">
+      <DependentUpon>RegistracijaKuhara.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RegistracijaMajstora.xaml.cs">
+      <DependentUpon>RegistracijaMajstora.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RegistracijaSefaRestorana.xaml.cs">
+      <DependentUpon>RegistracijaSefaRestorana.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RegistracijaStudenta.xaml.cs">
       <DependentUpon>RegistracijaStudenta.xaml</DependentUpon>
     </Compile>
@@ -164,6 +176,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="RegistracijaKonobara.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RegistracijaKuhara.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

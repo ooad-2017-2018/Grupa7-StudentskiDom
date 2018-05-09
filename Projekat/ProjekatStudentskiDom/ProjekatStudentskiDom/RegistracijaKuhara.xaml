@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="ProjekatStudentskiDom.RegistracijaMajstora"
+    x:Class="ProjekatStudentskiDom.RegistracijaKuhara"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:ProjekatStudentskiDom"
@@ -46,7 +46,5 @@
         <Button x:Name="otkazi" Content="Otkaži" FontSize="30" HorizontalAlignment="Left" Margin="56,49,0,0" VerticalAlignment="Top" Width="148" Click="otkazi_Click" Grid.Row="6" Grid.Column="1" Height="57"/>
         <ComboBox x:Name="pol" HorizontalAlignment="Left" Margin="292,50,0,0" VerticalAlignment="Top" Height="66" Grid.Column="1" Grid.Row="4" Width="334"/>
         <TextBlock HorizontalAlignment="Left" Margin="26,56,0,0" Text="Pol:" FontSize="35" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="4" Grid.Column="1"/>
-        <TextBox x:Name="tip" Margin="292,0,0,41" FontSize="35" VerticalAlignment="Bottom" Height="52" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left" Width="330"/>
-        <TextBlock HorizontalAlignment="Left" Margin="26,0,0,49" Text="Tip:" FontSize="35" TextWrapping="Wrap" VerticalAlignment="Bottom" Grid.Row="3" Grid.Column="1"/>
     </Grid>
 </Page>

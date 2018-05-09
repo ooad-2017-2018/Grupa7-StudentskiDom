@@ -28,11 +28,28 @@ namespace ProjekatStudentskiDom
         {
             this.InitializeComponent();
             this.sd = sd;
+            pol.Items.Add("Muški");
+            pol.Items.Add("Ženski");
+            pol.SelectedIndex = 0;
         }
 
         private void registruj_Click(object sender, RoutedEventArgs e)
         {
-            sd.dodajBlagajnika(ime.Text, prezime.Text, datumRodjenja.Text, username.Text, password.Password,'M',300,"aaa");
+            String dan = jmbg.Text.Substring(0, 2);
+            String mjesec = jmbg.Text.Substring(2, 2);
+            String godina = "1" + jmbg.Text.Substring(4, 3);
+            char p;
+            if ((string)pol.SelectedItem == "Muški") p = 'M';
+            else p = 'Z';
+            sd.dodajBlagajnika(ime.Text, prezime.Text, dan + "." + mjesec + "." + godina, username.Text, password.Password, p, Int32.Parse(plata.Text),racun.Text);
+            Page adminPage = new AdminPage(sd);
+            this.Content = adminPage;
+        }
+
+        private void otkazi_Click(object sender, RoutedEventArgs e)
+        {
+            Page adminPage = new AdminPage(sd);
+            this.Content = adminPage;
         }
     }
 }

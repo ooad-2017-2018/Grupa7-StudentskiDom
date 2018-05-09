@@ -13,7 +13,6 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using ProjekatStudentskiDom.Klase;
-using Windows.UI.Popups;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -22,37 +21,35 @@ namespace ProjekatStudentskiDom
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class AdminPregledClanova : Page
+    public sealed partial class RegistracijaKonobara : Page
     {
         StudentskiDom sd;
-        public AdminPregledClanova(StudentskiDom sd)
+        public RegistracijaKonobara(StudentskiDom sd)
         {
             this.InitializeComponent();
             this.sd = sd;
-
-            upisiUListe();
+            pol.Items.Add("Muški");
+            pol.Items.Add("Ženski");
+            pol.SelectedIndex = 0;
         }
 
-        private void upisiUListe()
+        private void registruj_Click(object sender, RoutedEventArgs e)
         {
-            List<Student> s=sd.dajStudente();
-            foreach(Student student in s)
-            {
-                studenti.Items.Add(student.ToString());
-            }
-
-            List<Uposlenik> u = sd.dajUposlenike();
-            foreach(Uposlenik uposlenik in u)
-            {
-                uposlenici.Items.Add(uposlenik.ToString());
-            }
+            String dan = jmbg.Text.Substring(0, 2);
+            String mjesec = jmbg.Text.Substring(2, 2);
+            String godina = "1" + jmbg.Text.Substring(4, 3);
+            char p;
+            if ((string)pol.SelectedItem == "Muški") p = 'M';
+            else p = 'Z';
+            sd.dodajKonobara(ime.Text, prezime.Text, dan + "." + mjesec + "." + godina, username.Text, password.Password, p, Int32.Parse(plata.Text), racun.Text);
+            Page adminPage = new AdminPage(sd);
+            this.Content = adminPage;
         }
 
-        private void nazad_Click(object sender, RoutedEventArgs e)
+        private void otkazi_Click(object sender, RoutedEventArgs e)
         {
             Page adminPage = new AdminPage(sd);
             this.Content = adminPage;
         }
-        
     }
 }

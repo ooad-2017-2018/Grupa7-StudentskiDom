@@ -31,7 +31,12 @@ namespace ProjekatStudentskiDom
         {
             this.InitializeComponent();
             sd = new StudentskiDom();
-            sd.dodajKuhara("Ahmed", "Oruc", "05.09.1996", "xxxCSGOOneTapHeadshotMasterBRNDDVCxxx", "berinaljubawnajwishe11104ever", 'Z', -5, "4254675");
+        }
+
+        public MainPage(StudentskiDom sd)
+        {
+            this.InitializeComponent();
+            this.sd = sd;
         }
 
         private void loginButton_Click(object sender, RoutedEventArgs e)
@@ -50,9 +55,9 @@ namespace ProjekatStudentskiDom
                         Page ap = new AdminPage(sd);
                         this.Content = ap;
                     }
-                    if(o is Student)
+                    if (o is Student)
                     {
-                        Frame.Navigate(typeof(StudentPage));
+
                     }
                 }
             }
@@ -60,7 +65,7 @@ namespace ProjekatStudentskiDom
 
         private void sifraPocetni_PreviewKeyDown(object sender, KeyRoutedEventArgs e)
         {
-            if(e.Key==Windows.System.VirtualKey.Enter)
+            if (e.Key == Windows.System.VirtualKey.Enter)
             {
                 loginButton_Click(this, new RoutedEventArgs());
             }
