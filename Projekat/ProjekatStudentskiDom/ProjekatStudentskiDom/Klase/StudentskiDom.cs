@@ -11,6 +11,17 @@ namespace ProjekatStudentskiDom.Klase
         private Admin admin=new Admin("Rijad", "Pedljak", "19.07.1996", "rpedljak", "FLStudio11", 'M');
         private List<Student> studenti=new List<Student>();
         private List<Uposlenik> uposlenici = new List<Uposlenik>();
+        private List<string> novosti = new List<string>();
+
+        public void dodajNovost(string novost)
+        {
+            novosti.Add(novost);
+        }
+
+        public List<string> dajNovosti()
+        {
+            return novosti;
+        }
 
         public void dodajStudenta(string ime, string prezime, string datumRodjenja, string username, string password, char pol, int brojSobe, bool teretana, string kanton) {
             studenti.Add(new Student(ime, prezime, datumRodjenja, username, password, pol, brojSobe, teretana, kanton));

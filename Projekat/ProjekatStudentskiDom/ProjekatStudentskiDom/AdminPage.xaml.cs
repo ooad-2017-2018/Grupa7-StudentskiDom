@@ -36,8 +36,6 @@ namespace ProjekatStudentskiDom
             {
                 dobrodosaoAdmin.Text = "Dobrodošla, " + sd.dajAdmina().Ime + "!";
             }
-            listaNovosti.Items.Add("Požar na sedmom spratu usmrtio troje ljudi. A.O. (1996), N.R. (1997) i A.K. (1997) su smrtno stradali");
-            listaNovosti.Items.Add("Dajana Mojsilović izbačena iz doma zbog nepoštivanja pravila i kodeksa ponašanja.");
             comboUposlenici.Items.Add("Blagajnik");
             comboUposlenici.Items.Add("Kuhar");
             comboUposlenici.Items.Add("Šef restorana");
@@ -98,6 +96,7 @@ namespace ProjekatStudentskiDom
             if(novostText.Text.Length>0)
             {
                 listaNovosti.Items.Add(novostText.Text);
+                sd.dodajNovost(novostText.Text);
                 novostText.Text = "";
             }
         }

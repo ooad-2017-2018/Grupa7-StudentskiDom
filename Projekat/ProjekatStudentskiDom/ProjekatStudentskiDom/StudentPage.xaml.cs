@@ -23,11 +23,20 @@ namespace ProjekatStudentskiDom
     /// </summary>
     public sealed partial class StudentPage : Page
     {
+        Student s;
         StudentskiDom sd;
-        public StudentPage(StudentskiDom sd)
+        public StudentPage(Student s, StudentskiDom sd)
         {
             this.InitializeComponent();
+            this.s = s;
             this.sd = sd;
+            if (s.Pol == 'M') dobrodosaoText.Text = "Dobrodošao, " + s.Ime + "e!";
+            else dobrodosaoText.Text = "Dobrodošla, " + s.Ime + "!";
+            List<string> novosti = sd.dajNovosti();
+            foreach(string novost in novosti)
+            {
+                listaNovostiStudent.Items.Add(novost);
+            }
         }
     }
 }

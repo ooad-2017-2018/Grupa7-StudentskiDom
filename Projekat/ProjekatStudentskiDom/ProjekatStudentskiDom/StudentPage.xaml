@@ -23,9 +23,8 @@
             <ColumnDefinition Width="3*"></ColumnDefinition>
             <ColumnDefinition Width="3*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <ListView x:Name="listaNovostiStudent" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="825" Margin="826,111,-1438,-936" Grid.RowSpan="2" VerticalAlignment="Top" Width="612" IsSynchronizedWithCurrentItem="False"/>
+        <ListView x:Name="listaNovostiStudent" HorizontalAlignment="Left" Margin="72,132,0,0" Width="612" IsSynchronizedWithCurrentItem="False" Grid.Column="1" Height="349" VerticalAlignment="Top"/>
         <TextBlock Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="820,28,-1077,-80" FontSize="30" Grid.RowSpan="2" Text="Novosti" TextWrapping="Wrap" VerticalAlignment="Top" Height="52" Width="257"/>
-        <Image x:Name="slikaStudent" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="150" Margin="85,80,-235,-233" Grid.RowSpan="2" VerticalAlignment="Top" Width="150"/>
-        <TextBlock x:Name="dobrodosaoText" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="271,77,-707,-125" Grid.RowSpan="2" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36" Width="436"/>
+        <TextBlock x:Name="dobrodosaoText" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="50,77,-707,-125" Grid.RowSpan="2" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36" Width="436"/>
     </Grid>
 </Page>

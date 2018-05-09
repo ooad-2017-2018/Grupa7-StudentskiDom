@@ -57,7 +57,8 @@ namespace ProjekatStudentskiDom
                     }
                     if (o is Student)
                     {
-
+                        Page sp = new StudentPage((Student)o, sd);
+                        this.Content = sp;
                     }
                 }
             }
