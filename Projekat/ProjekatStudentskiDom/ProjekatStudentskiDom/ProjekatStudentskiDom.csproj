@@ -92,48 +92,48 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="AdminPage.xaml.cs">
+    <Compile Include="View\AdminPage.xaml.cs">
       <DependentUpon>AdminPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AdminPregledClanova.xaml.cs">
+    <Compile Include="View\AdminPregledClanova.xaml.cs">
       <DependentUpon>AdminPregledClanova.xaml</DependentUpon>
     </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Klase\Admin.cs" />
-    <Compile Include="Klase\Blagajnik.cs" />
-    <Compile Include="Klase\Konobar.cs" />
-    <Compile Include="Klase\Kuhar.cs" />
-    <Compile Include="Klase\Majstor.cs" />
-    <Compile Include="Klase\SefRestorana.cs" />
-    <Compile Include="Klase\Student.cs" />
-    <Compile Include="Klase\StudentskiDom.cs" />
-    <Compile Include="MainPage.xaml.cs">
+    <Compile Include="Model\Admin.cs" />
+    <Compile Include="Model\Blagajnik.cs" />
+    <Compile Include="Model\Konobar.cs" />
+    <Compile Include="Model\Kuhar.cs" />
+    <Compile Include="Model\Majstor.cs" />
+    <Compile Include="Model\SefRestorana.cs" />
+    <Compile Include="Model\Student.cs" />
+    <Compile Include="Model\StudentskiDom.cs" />
+    <Compile Include="View\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Klase\Osoba.cs" />
+    <Compile Include="Model\Osoba.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Klase\Uposlenik.cs" />
-    <Compile Include="RegistracijaBlagajnika.xaml.cs">
+    <Compile Include="Model\Uposlenik.cs" />
+    <Compile Include="View\RegistracijaBlagajnika.xaml.cs">
       <DependentUpon>RegistracijaBlagajnika.xaml</DependentUpon>
     </Compile>
-    <Compile Include="RegistracijaKonobara.xaml.cs">
+    <Compile Include="View\RegistracijaKonobara.xaml.cs">
       <DependentUpon>RegistracijaKonobara.xaml</DependentUpon>
     </Compile>
-    <Compile Include="RegistracijaKuhara.xaml.cs">
+    <Compile Include="View\RegistracijaKuhara.xaml.cs">
       <DependentUpon>RegistracijaKuhara.xaml</DependentUpon>
     </Compile>
-    <Compile Include="RegistracijaMajstora.xaml.cs">
+    <Compile Include="View\RegistracijaMajstora.xaml.cs">
       <DependentUpon>RegistracijaMajstora.xaml</DependentUpon>
     </Compile>
-    <Compile Include="RegistracijaSefaRestorana.xaml.cs">
+    <Compile Include="View\RegistracijaSefaRestorana.xaml.cs">
       <DependentUpon>RegistracijaSefaRestorana.xaml</DependentUpon>
     </Compile>
-    <Compile Include="RegistracijaStudenta.xaml.cs">
+    <Compile Include="View\RegistracijaStudenta.xaml.cs">
       <DependentUpon>RegistracijaStudenta.xaml</DependentUpon>
     </Compile>
-    <Compile Include="StudentPage.xaml.cs">
+    <Compile Include="View\StudentPage.xaml.cs">
       <DependentUpon>StudentPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
@@ -159,43 +159,43 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="AdminPage.xaml">
+    <Page Include="View\AdminPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="AdminPregledClanova.xaml">
+    <Page Include="View\AdminPregledClanova.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainPage.xaml">
+    <Page Include="View\MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="RegistracijaBlagajnika.xaml">
+    <Page Include="View\RegistracijaBlagajnika.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="RegistracijaKonobara.xaml">
+    <Page Include="View\RegistracijaKonobara.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="RegistracijaKuhara.xaml">
+    <Page Include="View\RegistracijaKuhara.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="RegistracijaMajstora.xaml">
+    <Page Include="View\RegistracijaMajstora.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="RegistracijaSefaRestorana.xaml">
+    <Page Include="View\RegistracijaSefaRestorana.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="RegistracijaStudenta.xaml">
+    <Page Include="View\RegistracijaStudenta.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="StudentPage.xaml">
+    <Page Include="View\StudentPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -207,6 +207,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Dodatno\" />
+    <Folder Include="ViewModel\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
