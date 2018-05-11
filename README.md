@@ -74,5 +74,7 @@ koju je i uzeo pri zaduživanju, nakon čega vraća ključ i karticu.
 - Recepcija: osoba na recepciji koja kontroliše ko ulazi i izlazi iz doma i održava red i mir noću
 - Student: sjedi i uživa (njegovo je samo da uči, sve su mu omogućili)
 
+TEST
+
 
  
