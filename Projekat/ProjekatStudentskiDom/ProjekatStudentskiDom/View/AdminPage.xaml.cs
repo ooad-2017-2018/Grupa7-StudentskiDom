@@ -28,6 +28,7 @@ namespace ProjekatStudentskiDom
         {
             this.InitializeComponent();
             this.sd = sd;
+            novostValidacija.Opacity = 0;
             if (sd.dajAdmina().Pol == 'M')
             {
                 dobrodosaoAdmin.Text = "Dobrodošao, " + sd.dajAdmina().Ime + "e!";
@@ -96,8 +97,13 @@ namespace ProjekatStudentskiDom
             if(novostText.Text.Length>0)
             {
                 listaNovosti.Items.Add(novostText.Text);
+                novostValidacija.Opacity = 0;
                 sd.dodajNovost(novostText.Text);
                 novostText.Text = "";
+            }
+            else
+            {
+                novostValidacija.Opacity = 100;
             }
         }
 

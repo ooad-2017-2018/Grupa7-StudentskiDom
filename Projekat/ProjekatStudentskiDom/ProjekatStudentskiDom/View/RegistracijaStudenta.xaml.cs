@@ -28,6 +28,7 @@ namespace ProjekatStudentskiDom
         {
             this.InitializeComponent();
             this.sd = sd;
+            validacija.Opacity = 0;
             dodajUCombo();
         }
 
@@ -61,6 +62,12 @@ namespace ProjekatStudentskiDom
 
         private void registruj_Click(object sender, RoutedEventArgs e)
         {
+            if (!sobaValidate() || ime.Text.Length == 0 || prezime.Text.Length == 0 || username.Text.Length == 0 || password.Password.Length == 0 || !jmbgValidate(jmbg.Text))
+            {
+                validacija.Opacity = 100;
+                return;
+            }
+            validacija.Opacity = 0;
             String dan = jmbg.Text.Substring(0, 2);
             String mjesec = jmbg.Text.Substring(2, 2);
             String godina = "1" + jmbg.Text.Substring(4, 3);
@@ -73,6 +80,44 @@ namespace ProjekatStudentskiDom
             sd.dodajStudenta(ime.Text, prezime.Text, dan + "." + mjesec + "." + godina, username.Text, password.Password, p, Int32.Parse(soba.Text), t, (string)kanton.SelectedItem);
             Page adminPage = new AdminPage(sd);
             this.Content = adminPage;
+        }
+
+        public bool sobaValidate()
+        {
+            if (soba.Text.Length != 3) return false;
+            for(int i=0;i<soba.Text.Length;i++)
+            {
+                if (soba.Text[i] < '0' || soba.Text[i] > '9') return false;
+            }
+            return true;
+        }
+
+        public bool jmbgValidate(string jmbg)
+        {
+            bool prestupna = false;
+            if (jmbg.Length != 13) return false;
+            for (int i = 0; i < jmbg.Length; i++)
+            {
+                if (jmbg[i] < '0' || jmbg[i] > '9') return false;
+            }
+            int dan = Int32.Parse(jmbg.Substring(0, 2));
+            int mjesec = Int32.Parse(jmbg.Substring(2, 2));
+            int godina = Int32.Parse("1" + jmbg.Substring(4, 3));
+
+            if (dan == 0 || mjesec == 0 || godina == 0 || mjesec > 12 || dan > 31 || godina > System.DateTime.Now.Year) return false;
+
+            if ((godina % 4 == 0 && godina % 100 != 0) || godina % 400 == 0) prestupna = true;
+
+            if (mjesec == 2)
+            {
+                if (!prestupna && dan > 28) return false;
+                if (dan > 29) return false;
+            }
+            if (mjesec == 4 || mjesec == 6 || mjesec == 9 || mjesec == 11)
+            {
+                if (dan > 30) return false;
+            }
+            return true;
         }
     }
 

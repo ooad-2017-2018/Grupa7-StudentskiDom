@@ -35,5 +35,6 @@
         <TextBox x:Name="novostText" HorizontalAlignment="Left" Margin="166,0,0,160" Text="" Width="465" Grid.Column="1" Grid.Row="1" Height="56" VerticalAlignment="Bottom"/>
         <Button x:Name="odjava" Content="Odjava" HorizontalAlignment="Left" Margin="21,156,-208,-210" VerticalAlignment="Top" Click="odjava_Click" Grid.Column="1" Grid.Row="1" Height="54" Width="187" FontSize="20"/>
         <ComboBox x:Name="comboUposlenici" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="105,331,-364,-388" Grid.RowSpan="2" VerticalAlignment="Top" Height="57" Width="259" IsEnabled="False"/>
+        <TextBlock x:Name="novostValidacija" HorizontalAlignment="Left" Margin="553,133,0,0" FontSize="30" Text="Prazno!" TextWrapping="Wrap" VerticalAlignment="Top" Height="50" Width="140" Grid.Column="1" Grid.RowSpan="1" RenderTransformOrigin="0.538,0.602" Opacity="1" Grid.Row="1" Foreground="Red"/>
     </Grid>
 </Page>

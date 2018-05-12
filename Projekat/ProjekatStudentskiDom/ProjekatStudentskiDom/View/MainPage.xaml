@@ -57,12 +57,14 @@
             <StackPanel x:Name="stek" HorizontalAlignment="Left" Height="197" VerticalAlignment="Top" Width="470">
                 <TextBlock Text="Username:" TextWrapping="Wrap" Height="30" FontSize="20"/>
                 <TextBox x:Name="korisnickoIme" Height="40" FontSize="20" SelectionHighlightColor="#FF0087F1" Tag="" PreviewKeyDown="korisnickoIme_PreviewKeyDown"/>
-                
+
                 <TextBlock Margin="0,20,0,0" x:Name="sifra" Text="Password:" TextWrapping="Wrap" Height="30" FontSize="20"/>
                 <PasswordBox x:Name="sifraPocetni"  Height="40" FontSize="20" PreviewKeyDown="sifraPocetni_PreviewKeyDown"/>
             </StackPanel>
             <Button x:Name="loginButton" Content="Prijavi se" HorizontalAlignment="Center" VerticalAlignment="Top"  Margin="170,0,0,0"  Canvas.Top="190" Width="82" Click="loginButton_Click" PreviewKeyDown="loginButton_PreviewKeyDown" />
         </Canvas>
+        <TextBlock x:Name="usernameValidacija" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="464,-114,-614,78" Text="Invalid username and/or password" TextWrapping="Wrap" VerticalAlignment="Bottom" Height="36" Width="350
+" Grid.Column="1" Grid.Row="1" FontSize="20" Foreground="Red" IsTextSelectionEnabled="False" Visibility="Visible"/>
 
     </Grid>
 

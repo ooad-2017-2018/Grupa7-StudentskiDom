@@ -31,12 +31,14 @@ namespace ProjekatStudentskiDom
         {
             this.InitializeComponent();
             sd = new StudentskiDom();
+            usernameValidacija.Opacity = 0;
         }
 
         public MainPage(StudentskiDom sd)
         {
             this.InitializeComponent();
             this.sd = sd;
+            usernameValidacija.Opacity = 0;
         }
 
         private void loginButton_Click(object sender, RoutedEventArgs e)
@@ -52,16 +54,19 @@ namespace ProjekatStudentskiDom
                 {
                     if (o is Admin)
                     {
+                        usernameValidacija.Opacity = 0;
                         Page ap = new AdminPage(sd);
                         this.Content = ap;
                     }
                     if (o is Student)
                     {
+                        usernameValidacija.Opacity = 0;
                         Page sp = new StudentPage((Student)o, sd);
                         this.Content = sp;
                     }
                 }
             }
+            usernameValidacija.Opacity = 100;
         }
 
         private void sifraPocetni_PreviewKeyDown(object sender, KeyRoutedEventArgs e)

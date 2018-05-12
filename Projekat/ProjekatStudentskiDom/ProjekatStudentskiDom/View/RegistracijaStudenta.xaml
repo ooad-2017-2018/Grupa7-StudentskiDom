@@ -46,6 +46,7 @@
         <TextBlock HorizontalAlignment="Left" Margin="67,41,0,0" Text="Kanton:" TextWrapping="Wrap" VerticalAlignment="Top" Height="70" Width="208" FontSize="35" Grid.Column="1" Grid.Row="3"/>
         <Button x:Name="registruj" Content="Registruj" HorizontalAlignment="Left" Margin="579,41,0,0" VerticalAlignment="Top" Width="192" FontSize="25" Click="registruj_Click" Grid.Row="6" Height="63"/>
         <Button x:Name="otkazi" Content="Otkaži" HorizontalAlignment="Left" Margin="820,43,-1012,-106" VerticalAlignment="Top" Height="63" Width="192" FontSize="25" Grid.Row="6" Grid.ColumnSpan="2" Click="otkazi_Click"/>
+        <TextBlock x:Name="validacija" Grid.ColumnSpan="1" Width="218" Height="50" HorizontalAlignment="Left" Margin="436,50,0,0" Grid.RowSpan="1" Text="Neispravni podaci!" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" Grid.Row="6" FontSize="20" Foreground="Red"/>
 
     </Grid>
 </Page>
