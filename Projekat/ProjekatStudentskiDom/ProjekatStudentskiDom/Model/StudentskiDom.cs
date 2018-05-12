@@ -3,15 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.WindowsAzure.MobileServices;
 
 namespace ProjekatStudentskiDom.Klase
 {
     public class StudentskiDom
     {
-        private Admin admin=new Admin("Rijad", "Pedljak", "19.07.1996", "rpedljak", "FLStudio11", 'M');
+        IMobileServiceTable<Admin> adminTableObj = App.mobileService.GetTable<Admin>();
+
+        private Admin admin = new Admin("Rijad", "Pedljak", "19.07.1996", "rpedljak", "FLStudio11", 'M');
         private List<Student> studenti=new List<Student>();
         private List<Uposlenik> uposlenici = new List<Uposlenik>();
         private List<string> novosti = new List<string>();
+
+        public StudentskiDom()
+        {
+            //admin = adminTableObj.LookupAsync("8e8df667-3a99-4b1a-a256-0a07c8841338");
+        }
 
         public void dodajNovost(string novost)
         {

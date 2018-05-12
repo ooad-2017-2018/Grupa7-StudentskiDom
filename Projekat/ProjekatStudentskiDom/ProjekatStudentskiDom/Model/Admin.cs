@@ -14,6 +14,11 @@ namespace ProjekatStudentskiDom.Klase
 
         }
 
+        public Admin() : base()
+        {
+
+        }
+
         public override string ToString()
         {
             return base.ToString();

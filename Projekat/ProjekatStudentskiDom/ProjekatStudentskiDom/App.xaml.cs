@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using ProjekatStudentskiDom.Klase;
+using Microsoft.WindowsAzure.MobileServices;
 
 namespace ProjekatStudentskiDom
 {
@@ -32,6 +33,9 @@ namespace ProjekatStudentskiDom
             this.InitializeComponent();
             this.Suspending += OnSuspending;
         }
+
+        public static MobileServiceClient mobileService = new MobileServiceClient("https://studentskidom.azurewebsites.net");
+
 
         /// <summary>
         /// Invoked when the application is launched normally by the end user.  Other entry points

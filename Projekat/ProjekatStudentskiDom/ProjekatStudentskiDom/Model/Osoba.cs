@@ -14,7 +14,12 @@ namespace ProjekatStudentskiDom {
         protected string password;
         protected string jmbg;
         protected char pol;
+        public string id;
 
+        public Osoba()
+        {
+
+        }
 
         protected Osoba(string ime, string prezime, string datumRodjenja, string username, string password, char pol)
         {

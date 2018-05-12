@@ -7,17 +7,18 @@ using System.Threading.Tasks;
 namespace ProjekatStudentskiDom.Klase
 {
     public class Student : Osoba {
-
-        private static int id = 1;
+        
         private int brojSobe;
         private bool teretana;
         private string kanton;
-        private int studentID;
+
+        public Student() : base() 
+        {
+
+        }
 
         public Student(string ime, string prezime, string datumRodjenja, string username, string password, char pol, int brojSobe, bool teretana, string kanton) : base(ime,prezime,datumRodjenja,username,password,pol)
         {
-            studentID = id;
-            id++;
             this.brojSobe = brojSobe;
             this.teretana = teretana;
             this.kanton = kanton;
@@ -27,6 +28,10 @@ namespace ProjekatStudentskiDom.Klase
         {
             return brojSobe;
         }
+
+        public int BrojSobe { get; set; }
+
+        public string Kanton { get; set; }
 
         public bool Teretana { get; set; }
 

@@ -13,6 +13,8 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using ProjekatStudentskiDom.Klase;
+using Microsoft.WindowsAzure.MobileServices;
+using Windows.UI.Popups;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -60,6 +62,8 @@ namespace ProjekatStudentskiDom
             
         }
 
+        IMobileServiceTable<Student> studentTableObj = App.mobileService.GetTable<Student>();
+
         private void registruj_Click(object sender, RoutedEventArgs e)
         {
             if (!sobaValidate() || ime.Text.Length == 0 || prezime.Text.Length == 0 || username.Text.Length == 0 || password.Password.Length == 0 || !jmbgValidate(jmbg.Text))
@@ -77,7 +81,27 @@ namespace ProjekatStudentskiDom
             bool t;
             if (teretana.IsChecked == true) t = true;
             else t = false;
-            sd.dodajStudenta(ime.Text, prezime.Text, dan + "." + mjesec + "." + godina, username.Text, password.Password, p, Int32.Parse(soba.Text), t, (string)kanton.SelectedItem);
+            try
+            {
+                Student obj = new Student();
+                obj.Ime = ime.Text;
+                obj.Prezime = prezime.Text;
+                obj.DatumRodjenja = dan + "." + mjesec + "." + godina;
+                obj.Username = username.Text;
+                obj.Password = password.Password;
+                obj.BrojSobe = Int32.Parse(soba.Text);
+                obj.Teretana = t;
+                obj.Kanton = (string)kanton.SelectedItem;
+                obj.Pol = p;
+                studentTableObj.InsertAsync(obj);
+                MessageDialog dialog = new MessageDialog("Uspješno ste unijeli studenta!");
+                dialog.ShowAsync();
+            } catch(Exception ex)
+            {
+                MessageDialog dialog = new MessageDialog("Error: " + ex.ToString());
+                dialog.ShowAsync();
+            }
+            //sd.dodajStudenta(ime.Text, prezime.Text, dan + "." + mjesec + "." + godina, username.Text, password.Password, p, Int32.Parse(soba.Text), t, (string)kanton.SelectedItem);
             Page adminPage = new AdminPage(sd);
             this.Content = adminPage;
         }
