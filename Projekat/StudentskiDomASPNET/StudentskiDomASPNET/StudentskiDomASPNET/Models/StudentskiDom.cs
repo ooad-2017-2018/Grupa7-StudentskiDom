@@ -12,11 +12,6 @@ namespace StudentskiDomASPNET.Models
         private List<Uposlenik> uposlenici = new List<Uposlenik>();
         private List<string> novosti = new List<string>();
 
-        public void povuciSaBaze()
-        {
-
-        }
-
         public void dodajNovost(string novost)
         {
             novosti.Add(novost);
