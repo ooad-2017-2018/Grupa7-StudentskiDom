@@ -8,13 +8,20 @@ namespace StudentskiDomASPNET.Models
 {
     public class Osoba
     {
+        [Required]
         protected string ime;
+        [Required]
         protected string prezime;
+        [Required]
         protected string datumRodjenja;
+        [Required]
         protected string username;
+        [Required]
         protected string password;
         protected string jmbg;
+        [Required]
         protected char pol;
+        [ScaffoldColumn(false)]
         public int OsobaId;
 
         public Osoba()

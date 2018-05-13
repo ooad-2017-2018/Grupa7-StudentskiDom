@@ -2,16 +2,22 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.ComponentModel.DataAnnotations;
 
 namespace StudentskiDomASPNET.Models
 {
     public class Student : Osoba
     {
-
-        public string StudentId { get; set; }
+        [ScaffoldColumn(false)]
+        private string studentId;
+        [Required]
+        [Range(100,999,ErrorMessage ="Sobe imaju vrijednost 100-999")]
         private int brojSobe;
         private bool teretana;
+        [Required]
         private string kanton;
+
+        public string StudentId { get; set; }
 
         public Student() : base()
         {
