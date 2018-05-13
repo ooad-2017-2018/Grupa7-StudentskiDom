@@ -16,9 +16,9 @@ namespace ProjekatStudentskiDom.Klase
         private List<Uposlenik> uposlenici = new List<Uposlenik>();
         private List<string> novosti = new List<string>();
 
-        public StudentskiDom()
+        public void povuciSaBaze()
         {
-            //admin = adminTableObj.LookupAsync("8e8df667-3a99-4b1a-a256-0a07c8841338");
+
         }
 
         public void dodajNovost(string novost)

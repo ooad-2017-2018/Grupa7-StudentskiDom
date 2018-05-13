@@ -53,6 +53,24 @@ namespace ProjekatStudentskiDom
             Page adminPage = new AdminPage(sd);
             this.Content = adminPage;
         }
-        
+
+        private void obrisi_Click(object sender, RoutedEventArgs e)
+        {
+            for(int i=studenti.Items.Count-1;i>=0;i--)
+            {
+                if(studenti.Items[i]==studenti.SelectedItem)
+                {
+                    studenti.Items.RemoveAt(i);
+                }
+            }
+
+            for (int i = uposlenici.Items.Count - 1; i >= 0; i--)
+            {
+                if (uposlenici.Items[i] == uposlenici.SelectedItem)
+                {
+                    uposlenici.Items.RemoveAt(i);
+                }
+            }
+        }
     }
 }

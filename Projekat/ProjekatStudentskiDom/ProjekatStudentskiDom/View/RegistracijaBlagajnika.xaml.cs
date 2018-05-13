@@ -13,6 +13,8 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using ProjekatStudentskiDom.Klase;
+using Microsoft.WindowsAzure.MobileServices;
+using Windows.UI.Popups;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -34,6 +36,8 @@ namespace ProjekatStudentskiDom
             pol.SelectedIndex = 0;
         }
 
+        IMobileServiceTable<Blagajnik> blagajnikTableObj = App.mobileService.GetTable<Blagajnik>();
+
         private void registruj_Click(object sender, RoutedEventArgs e)
         {
             if(plata.Text.Length==0 || racun.Text.Length==0 || ime.Text.Length==0 || prezime.Text.Length==0 || username.Text.Length==0 || password.Password.Length==0 || !jmbgValidate(jmbg.Text) || !racunValidate())
@@ -47,7 +51,27 @@ namespace ProjekatStudentskiDom
             char p;
             if ((string)pol.SelectedItem == "Muški") p = 'M';
             else p = 'Z';
-            sd.dodajBlagajnika(ime.Text, prezime.Text, dan + "." + mjesec + "." + godina, username.Text, password.Password, p, Int32.Parse(plata.Text),racun.Text);
+            try
+            {
+                Blagajnik obj = new Blagajnik();
+                obj.Ime = ime.Text;
+                obj.Prezime = prezime.Text;
+                obj.DatumRodjenja = dan + "." + mjesec + "." + godina;
+                obj.Username = username.Text;
+                obj.Password = password.Password;
+                obj.Pol = p;
+                obj.Plata = Double.Parse(plata.Text);
+                obj.BankovniRacun = racun.Text;
+                blagajnikTableObj.InsertAsync(obj);
+                MessageDialog dialog = new MessageDialog("Uspješno ste unijeli blagajnika!");
+                dialog.ShowAsync();
+            }
+            catch (Exception ex)
+            {
+                MessageDialog dialog = new MessageDialog("Error: " + ex.ToString());
+                dialog.ShowAsync();
+            }
+            //sd.dodajBlagajnika(ime.Text, prezime.Text, dan + "." + mjesec + "." + godina, username.Text, password.Password, p, Int32.Parse(plata.Text),racun.Text);
             validacija.Opacity = 0;
             Page adminPage = new AdminPage(sd);
             this.Content = adminPage;

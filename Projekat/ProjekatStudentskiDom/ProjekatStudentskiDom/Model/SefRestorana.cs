@@ -8,6 +8,11 @@ namespace ProjekatStudentskiDom.Klase
 {
     public class SefRestorana : Uposlenik
     {
+
+        public SefRestorana() : base()
+        {
+
+        }
         public SefRestorana(string ime, string prezime, string datumRodjenja, string username, string password, char pol, double plata, string bankovniRacun) : base(ime, prezime, datumRodjenja, username, password, pol, plata, bankovniRacun)
         {
 

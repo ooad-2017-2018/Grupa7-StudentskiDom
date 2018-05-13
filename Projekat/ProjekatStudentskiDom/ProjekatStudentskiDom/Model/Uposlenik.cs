@@ -7,19 +7,24 @@ using System.Threading.Tasks;
 namespace ProjekatStudentskiDom
 {
     public class Uposlenik : Osoba {
+        
+        protected string bankovniRacun;
+        protected double plata;
 
-        private static int id = 1;
-        private string bankovniRacun;
-        private double plata;
-        private int uposleniID;
+        public Uposlenik()
+        {
+
+        }
 
         public Uposlenik(string ime, string prezime, string datumRodjenja, string username, string password, char pol, double plata, string bankovniRacun) : base(ime,prezime,datumRodjenja,username,password,pol)
         {
-            uposleniID = id;
-            id++;
             this.bankovniRacun = bankovniRacun;
             this.plata = plata;
         }
+
+        public double Plata { get; set; }
+        
+        public string BankovniRacun { get; set; }
         
         public double dajPlatu()
         {
