@@ -7,6 +7,8 @@ namespace StudentskiDomASPNET.Models
 {
     public class Majstor : Uposlenik
     {
+
+        public string MajstorId { get; set; }
         public Majstor() : base()
         {
 

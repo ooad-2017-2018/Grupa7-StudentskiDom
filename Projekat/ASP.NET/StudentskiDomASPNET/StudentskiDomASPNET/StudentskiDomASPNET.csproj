@@ -183,11 +183,23 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminsController.cs" />
+    <Compile Include="Controllers\BlagajniksController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\KonobarsController.cs" />
+    <Compile Include="Controllers\KuharsController.cs" />
+    <Compile Include="Controllers\MajstorsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\SefRestoranasController.cs" />
+    <Compile Include="Controllers\StudentsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805131449208_initial.cs" />
+    <Compile Include="Migrations\201805131449208_initial.Designer.cs">
+      <DependentUpon>201805131449208_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\Blagajnik.cs" />
@@ -262,6 +274,41 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Admins\Create.cshtml" />
+    <Content Include="Views\Admins\Delete.cshtml" />
+    <Content Include="Views\Admins\Details.cshtml" />
+    <Content Include="Views\Admins\Edit.cshtml" />
+    <Content Include="Views\Admins\Index.cshtml" />
+    <Content Include="Views\Blagajniks\Create.cshtml" />
+    <Content Include="Views\Blagajniks\Delete.cshtml" />
+    <Content Include="Views\Blagajniks\Details.cshtml" />
+    <Content Include="Views\Blagajniks\Edit.cshtml" />
+    <Content Include="Views\Blagajniks\Index.cshtml" />
+    <Content Include="Views\Konobars\Create.cshtml" />
+    <Content Include="Views\Konobars\Delete.cshtml" />
+    <Content Include="Views\Konobars\Details.cshtml" />
+    <Content Include="Views\Konobars\Edit.cshtml" />
+    <Content Include="Views\Konobars\Index.cshtml" />
+    <Content Include="Views\Kuhars\Create.cshtml" />
+    <Content Include="Views\Kuhars\Delete.cshtml" />
+    <Content Include="Views\Kuhars\Details.cshtml" />
+    <Content Include="Views\Kuhars\Edit.cshtml" />
+    <Content Include="Views\Kuhars\Index.cshtml" />
+    <Content Include="Views\Majstors\Create.cshtml" />
+    <Content Include="Views\Majstors\Delete.cshtml" />
+    <Content Include="Views\Majstors\Details.cshtml" />
+    <Content Include="Views\Majstors\Edit.cshtml" />
+    <Content Include="Views\Majstors\Index.cshtml" />
+    <Content Include="Views\SefRestoranas\Create.cshtml" />
+    <Content Include="Views\SefRestoranas\Delete.cshtml" />
+    <Content Include="Views\SefRestoranas\Details.cshtml" />
+    <Content Include="Views\SefRestoranas\Edit.cshtml" />
+    <Content Include="Views\SefRestoranas\Index.cshtml" />
+    <Content Include="Views\Students\Create.cshtml" />
+    <Content Include="Views\Students\Delete.cshtml" />
+    <Content Include="Views\Students\Details.cshtml" />
+    <Content Include="Views\Students\Edit.cshtml" />
+    <Content Include="Views\Students\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -278,6 +325,11 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201805131449208_initial.resx">
+      <DependentUpon>201805131449208_initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

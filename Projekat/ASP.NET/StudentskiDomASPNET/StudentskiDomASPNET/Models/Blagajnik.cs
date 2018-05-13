@@ -7,6 +7,8 @@ namespace StudentskiDomASPNET.Models
 {
     public class Blagajnik : Uposlenik
     {
+
+        public string BlagajnikId { get; set; }
         public Blagajnik() : base()
         {
 

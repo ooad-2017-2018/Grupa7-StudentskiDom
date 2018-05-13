@@ -7,6 +7,8 @@ namespace StudentskiDomASPNET.Models
 {
     public class Kuhar : Uposlenik
     {
+
+        public string KuharId { get; set; }
         public Kuhar() : base()
         {
 

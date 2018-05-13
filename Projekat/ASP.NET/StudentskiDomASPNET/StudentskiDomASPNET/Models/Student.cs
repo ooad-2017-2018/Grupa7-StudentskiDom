@@ -7,6 +7,8 @@ namespace StudentskiDomASPNET.Models
 {
     public class Student : Osoba
     {
+
+        public string StudentId { get; set; }
         private int brojSobe;
         private bool teretana;
         private string kanton;
