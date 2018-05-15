@@ -63,6 +63,8 @@ namespace ProjekatStudentskiDom
                 obj.Pol = p;
                 obj.Plata = Double.Parse(plata.Text);
                 obj.BankovniRacun = racun.Text;
+                obj.Jmbg = jmbg.Text;
+                obj.SefRestoranaId = RandomString(10);
                 sefTableObj.InsertAsync(obj);
                 MessageDialog dialog = new MessageDialog("Uspješno ste unijeli šefa restorana!");
                 dialog.ShowAsync();
@@ -75,6 +77,13 @@ namespace ProjekatStudentskiDom
             //sd.dodajSefaRestorana(ime.Text, prezime.Text, dan + "." + mjesec + "." + godina, username.Text, password.Password, p, Int32.Parse(plata.Text), racun.Text);
             Page adminPage = new AdminPage(sd);
             this.Content = adminPage;
+        }
+
+        private static Random random = new Random();
+        public static string RandomString(int length)
+        {
+            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            return new string(Enumerable.Repeat(chars, length).Select(s => s[random.Next(s.Length)]).ToArray());
         }
 
         private void otkazi_Click(object sender, RoutedEventArgs e)

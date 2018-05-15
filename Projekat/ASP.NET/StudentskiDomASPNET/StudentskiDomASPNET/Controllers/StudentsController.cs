@@ -18,7 +18,6 @@ namespace StudentskiDomASPNET.Controllers
         private StudentskiDomContext db = new StudentskiDomContext();
 
         // GET: Students
-
         string apiURL = "http://studentskidomwebapi.azurewebsites.net/";
         public async Task<ActionResult> Index()
         {

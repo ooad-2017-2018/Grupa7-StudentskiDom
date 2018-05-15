@@ -8,7 +8,7 @@ namespace ProjekatStudentskiDom.Klase
 {
     public class SefRestorana : Uposlenik
     {
-
+        public string SefRestoranaId { get; set; }
         public SefRestorana() : base()
         {
 

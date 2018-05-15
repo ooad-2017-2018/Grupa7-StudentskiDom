@@ -8,7 +8,7 @@ namespace ProjekatStudentskiDom.Klase
 {
     public class Majstor : Uposlenik
     {
-
+        public string MajstorId { get; set; }
         public Majstor() : base()
         {
 

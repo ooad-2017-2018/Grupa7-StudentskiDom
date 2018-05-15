@@ -1,26 +1,61 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.WindowsAzure.MobileServices;
+using Windows.UI.Popups;
 
 namespace ProjekatStudentskiDom.Klase
 {
     public class StudentskiDom
     {
-        IMobileServiceTable<Admin> adminTableObj = App.mobileService.GetTable<Admin>();
+        IMobileServiceTable<Admin> adminTable = App.mobileService.GetTable<Admin>();
+       
 
-        private Admin admin = new Admin("Rijad", "Pedljak", "19.07.1996", "rpedljak", "FLStudio11", 'M');
+        private Admin admin = new Admin("Rijad","Pedljak","19.07.1996","rpedljak","FLStudio11",'M');
         private List<Student> studenti=new List<Student>();
         private List<Uposlenik> uposlenici = new List<Uposlenik>();
         private List<string> novosti = new List<string>();
 
-        public void povuciSaBaze()
-        {
 
+        public async Task<Admin> dajAdmina(string id)
+        {
+            return await adminTable.LookupAsync(id);
+        }
+        
+
+        public async void povuciIzBaze()
+        {
+            var task = dajAdmina("421b9db4-bb7e-4853-80c5-d93b770475dc");
+            admin = (Admin)task.GetType().GetProperty("id").GetValue(task);
         }
 
+        public void dodajAdmina()
+        {
+            try
+            {
+                Admin obj = new Admin();
+                obj.Ime = "Rijad";
+                obj.Prezime = "Pedljak";
+                obj.DatumRodjenja ="19.07.1996";
+                obj.Username = "rpedljak";
+                obj.Password = "FLStudio11";
+                obj.Pol = 'M';
+                obj.Jmbg = "1907996190004";
+                obj.AdminId = "rijadpedljak";
+                adminTable.InsertAsync(obj);
+                MessageDialog dialog = new MessageDialog("Uspješno ste unijeli admina!");
+                dialog.ShowAsync();
+            }
+            catch (Exception ex)
+            {
+                MessageDialog dialog = new MessageDialog("Error: " + ex.ToString());
+                dialog.ShowAsync();
+            }
+        }
+        
         public void dodajNovost(string novost)
         {
             novosti.Add(novost);

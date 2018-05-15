@@ -12,6 +12,8 @@ namespace ProjekatStudentskiDom.Klase
         private bool teretana;
         private string kanton;
 
+        public string StudentId { get; set; }
+
         public Student() : base() 
         {
 

@@ -9,6 +9,7 @@ namespace ProjekatStudentskiDom.Klase
     public class Konobar : Uposlenik
     {
 
+        public string KonobarId { get; set; }
         public Konobar() : base()
         {
 

@@ -12,7 +12,7 @@ namespace StudentskiDomASPNET.Models
         private string studentId;
         [Required]
         [Range(100,999,ErrorMessage ="Sobe imaju vrijednost 100-999")]
-        private Int32 brojSobe;
+        private double brojSobe;
         private bool teretana;
         [Required]
         private string kanton;
@@ -31,7 +31,7 @@ namespace StudentskiDomASPNET.Models
             this.kanton = kanton;
         }
 
-        public int BrojSobe { get; set; }
+        public double BrojSobe { get; set; }
 
         public string Kanton { get; set; }
 

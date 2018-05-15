@@ -93,6 +93,8 @@ namespace ProjekatStudentskiDom
                 obj.Teretana = t;
                 obj.Kanton = (string)kanton.SelectedItem;
                 obj.Pol = p;
+                obj.Jmbg = jmbg.Text;
+                obj.StudentId = RandomString(10);
                 studentTableObj.InsertAsync(obj);
                 MessageDialog dialog = new MessageDialog("Uspješno ste unijeli studenta!");
                 dialog.ShowAsync();
@@ -143,7 +145,12 @@ namespace ProjekatStudentskiDom
             }
             return true;
         }
-    }
 
-    
+        private static Random random = new Random();
+        public static string RandomString(int length)
+        {
+            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            return new string(Enumerable.Repeat(chars, length).Select(s => s[random.Next(s.Length)]).ToArray());
+        }
+    }
 }

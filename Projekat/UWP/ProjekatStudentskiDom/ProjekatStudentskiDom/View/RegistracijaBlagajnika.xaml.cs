@@ -62,6 +62,8 @@ namespace ProjekatStudentskiDom
                 obj.Pol = p;
                 obj.Plata = Double.Parse(plata.Text);
                 obj.BankovniRacun = racun.Text;
+                obj.Jmbg = jmbg.Text;
+                obj.BlagajnikId = RandomString(10);
                 blagajnikTableObj.InsertAsync(obj);
                 MessageDialog dialog = new MessageDialog("Uspješno ste unijeli blagajnika!");
                 dialog.ShowAsync();
@@ -119,6 +121,13 @@ namespace ProjekatStudentskiDom
                 if (dan > 30) return false;
             }
             return true;
+        }
+
+        private static Random random = new Random();
+        public static string RandomString(int length)
+        {
+            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            return new string(Enumerable.Repeat(chars, length).Select(s => s[random.Next(s.Length)]).ToArray());
         }
     }
 }
