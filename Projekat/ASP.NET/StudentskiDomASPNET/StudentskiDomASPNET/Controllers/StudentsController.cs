@@ -4,8 +4,11 @@ using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using Newtonsoft.Json;
 using StudentskiDomASPNET.Models;
 
 namespace StudentskiDomASPNET.Controllers
@@ -15,9 +18,29 @@ namespace StudentskiDomASPNET.Controllers
         private StudentskiDomContext db = new StudentskiDomContext();
 
         // GET: Students
-        public ActionResult Index()
+
+        string apiURL = "http://studentskidomwebapi.azurewebsites.net/";
+        public async Task<ActionResult> Index()
         {
-            return View(db.Student.ToList());
+            List<Student> studenti = new List<Student>();
+
+            using(var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri(apiURL);
+                client.DefaultRequestHeaders.Clear();
+
+                client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+
+                HttpResponseMessage res = await client.GetAsync("api/Students");
+
+                if(res.IsSuccessStatusCode)
+                {
+                    var response = res.Content.ReadAsStringAsync().Result;
+                    studenti = JsonConvert.DeserializeObject<List<Student>>(response);
+                   
+                }
+            }
+            return View(studenti);
         }
 
         // GET: Students/Details/5
