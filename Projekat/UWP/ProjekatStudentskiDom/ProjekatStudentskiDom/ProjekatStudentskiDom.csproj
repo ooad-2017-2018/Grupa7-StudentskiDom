@@ -92,6 +92,10 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="ViewModel\AdminViewModel.cs" />
+    <Compile Include="ViewModel\OsobaViewModel.cs" />
+    <Compile Include="ViewModel\StudentskiDomViewModel.cs" />
+    <Compile Include="ViewModel\StudentViewModel.cs" />
     <Compile Include="View\AdminPage.xaml.cs">
       <DependentUpon>AdminPage.xaml</DependentUpon>
     </Compile>
@@ -210,7 +214,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Dodatno\" />
-    <Folder Include="ViewModel\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
