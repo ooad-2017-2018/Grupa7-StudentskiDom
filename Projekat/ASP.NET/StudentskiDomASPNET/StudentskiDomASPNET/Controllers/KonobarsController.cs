@@ -4,8 +4,11 @@ using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using Newtonsoft.Json;
 using StudentskiDomASPNET.Models;
 
 namespace StudentskiDomASPNET.Controllers
@@ -15,9 +18,28 @@ namespace StudentskiDomASPNET.Controllers
         private StudentskiDomContext db = new StudentskiDomContext();
 
         // GET: Konobars
-        public ActionResult Index()
+        string apiURL = "http://studentskidomwebapi.azurewebsites.net/";
+        public async Task<ActionResult> Index()
         {
-            return View(db.Konobar.ToList());
+            List<Konobar> konobari = new List<Konobar>();
+
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri(apiURL);
+                client.DefaultRequestHeaders.Clear();
+
+                client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+
+                HttpResponseMessage res = await client.GetAsync("api/SefRestoranas");
+
+                if (res.IsSuccessStatusCode)
+                {
+                    var response = res.Content.ReadAsStringAsync().Result;
+                    konobari = JsonConvert.DeserializeObject<List<Konobar>>(response);
+
+                }
+            }
+            return View(konobari);
         }
 
         // GET: Konobars/Details/5
