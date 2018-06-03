@@ -35,13 +35,13 @@ namespace ProjekatStudentskiDom
 
         private void upisiUListe()
         {
-            List<Student> s=sd.dajStudente();
+            List<Student> s=sd.Student();
             foreach(Student student in s)
             {
                 studenti.Items.Add(student.ToString());
             }
 
-            List<Uposlenik> u = sd.dajUposlenike();
+            List<Uposlenik> u = sd.Uposlenik();
             foreach(Uposlenik uposlenik in u)
             {
                 uposlenici.Items.Add(uposlenik.ToString());

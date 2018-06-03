@@ -23,8 +23,11 @@
             <ColumnDefinition Width="3*"></ColumnDefinition>
             <ColumnDefinition Width="3*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <ListView x:Name="listaNovostiStudent" HorizontalAlignment="Left" Margin="72,132,0,0" Width="612" IsSynchronizedWithCurrentItem="False" Grid.Column="1" Height="349" VerticalAlignment="Top"/>
-        <TextBlock Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="820,28,-1077,-80" FontSize="30" Grid.RowSpan="2" Text="Novosti" TextWrapping="Wrap" VerticalAlignment="Top" Height="52" Width="257"/>
-        <TextBlock x:Name="dobrodosaoText" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="50,77,-707,-125" Grid.RowSpan="2" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36" Width="436"/>
+        <ListView x:Name="listaNovostiStudent" Margin="72,0,0,119" IsSynchronizedWithCurrentItem="False" Grid.Column="1" Height="349" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="612"/>
+        <TextBlock Margin="0,0,423,520" FontSize="30" Text="Novosti" TextWrapping="Wrap" Grid.Column="1" HorizontalAlignment="Right" Width="257" Height="52" VerticalAlignment="Bottom"/>
+        <TextBlock x:Name="dobrodosaoText" Margin="0,0,264,400" TextWrapping="Wrap" FontSize="36" Height="48" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="436"/>
+        <Button x:Name="povratak" Content="Povratak" FontSize="30" HorizontalAlignment="Left" Margin="476,262,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.Row="1" Height="56" Width="201" Click="povratak_Click"/>
+        <TextBlock x:Name="brojSobe" FontSize="30" Margin="0,0,429,300" Text="Broj sobe: " TextWrapping="Wrap" HorizontalAlignment="Right" Width="262" Height="73" VerticalAlignment="Bottom"/>
+        <Button Content="Zahtjev za promjenu sobe" FontSize="20" HorizontalAlignment="Right" Margin="0,0,429,200" VerticalAlignment="Bottom" Height="63" Width="256"/>
     </Grid>
 </Page>

@@ -29,13 +29,13 @@ namespace ProjekatStudentskiDom
             this.InitializeComponent();
             this.sd = sd;
             novostValidacija.Opacity = 0;
-            if (sd.dajAdmina().Pol == 'M')
+            if (sd.Admin().Pol == 'M')
             {
-                dobrodosaoAdmin.Text = "Dobrodošao, " + sd.dajAdmina().Ime + "e!";
+                dobrodosaoAdmin.Text = "Dobrodošao, " + sd.Admin().Ime + "e!";
             }
             else
             {
-                dobrodosaoAdmin.Text = "Dobrodošla, " + sd.dajAdmina().Ime + "!";
+                dobrodosaoAdmin.Text = "Dobrodošla, " + sd.Admin().Ime + "!";
             }
             comboUposlenici.Items.Add("Blagajnik");
             comboUposlenici.Items.Add("Kuhar");

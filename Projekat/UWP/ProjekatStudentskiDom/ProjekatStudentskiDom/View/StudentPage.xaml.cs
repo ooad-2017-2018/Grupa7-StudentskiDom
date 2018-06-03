@@ -37,6 +37,13 @@ namespace ProjekatStudentskiDom
             {
                 listaNovostiStudent.Items.Add(novost);
             }
+            brojSobe.Text += s.dajBrojSobe();
+        }
+
+        private void povratak_Click(object sender, RoutedEventArgs e)
+        {           
+            Page main = new MainPage(sd);
+            this.Content = main;           
         }
     }
 }

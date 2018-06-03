@@ -31,7 +31,7 @@ namespace ProjekatStudentskiDom
         {
             this.InitializeComponent();
             sd = new StudentskiDom();
-            //sd.povuciIzBaze();
+            sd.povuciIzBaze();
             usernameValidacija.Opacity = 0;
         }
 
