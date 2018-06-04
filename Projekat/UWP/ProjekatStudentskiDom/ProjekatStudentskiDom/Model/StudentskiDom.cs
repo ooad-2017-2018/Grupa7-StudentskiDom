@@ -149,6 +149,11 @@ namespace ProjekatStudentskiDom.Klase
             novosti.Add(novost);
         }
 
+        public void obrisiNovost(int i)
+        {
+            novosti.RemoveAt(i);
+        }
+
         public List<string> dajNovosti()
         {
             return novosti;

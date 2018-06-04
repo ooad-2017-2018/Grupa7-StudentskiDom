@@ -43,6 +43,11 @@ namespace ProjekatStudentskiDom
             comboUposlenici.Items.Add("Konobar");
             comboUposlenici.Items.Add("Majstor");
             comboUposlenici.SelectedIndex = 0;
+            List<string> novosti = sd.dajNovosti();
+            foreach (string novost in novosti)
+            {
+                listaNovosti.Items.Add(novost);
+            }
         }
 
         private void pregled_Click(object sender, RoutedEventArgs e)
@@ -121,6 +126,18 @@ namespace ProjekatStudentskiDom
         private void student_Click(object sender, RoutedEventArgs e)
         {
             comboUposlenici.IsEnabled = false;
+        }
+
+        private void listaNovosti_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            for (int i = listaNovosti.Items.Count - 1; i >= 0; i--)
+            {
+                if (listaNovosti.Items[i] == listaNovosti.SelectedItem)
+                {
+                    listaNovosti.Items.RemoveAt(i);
+                    sd.obrisiNovost(i);
+                }
+            }
         }
     }
 }
