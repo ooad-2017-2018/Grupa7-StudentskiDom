@@ -29,5 +29,8 @@
         <Button x:Name="povratak" Content="Povratak" FontSize="30" HorizontalAlignment="Left" Margin="476,262,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.Row="1" Height="56" Width="201" Click="povratak_Click"/>
         <TextBlock x:Name="brojSobe" FontSize="30" Margin="0,0,429,300" Text="Broj sobe: " TextWrapping="Wrap" HorizontalAlignment="Right" Width="262" Height="73" VerticalAlignment="Bottom"/>
         <TextBlock x:Name="counter" FontSize="30" Margin="0,94,107,0" Text="" TextWrapping="Wrap" Grid.Row="1" Height="128" VerticalAlignment="Top" HorizontalAlignment="Right" Width="590"/>
+        <TextBlock x:Name="rucak" FontSize="30" HorizontalAlignment="Right" Margin="0,323,347,0" Text="Preostalo ručaka: " TextWrapping="Wrap" VerticalAlignment="Top" Height="83" Width="342"/>
+        <TextBlock x:Name="vecera" FontSize="30" HorizontalAlignment="Right" Margin="0,393,347,0" Text="Preostalo večera: " TextWrapping="Wrap" VerticalAlignment="Top" Height="83" Width="342"/>
+        <TextBlock x:Name="kafeterija" FontSize="30" HorizontalAlignment="Right" Margin="0,458,259,0" Text="Preostalo bonova za kafu: " TextWrapping="Wrap" Width="430" Height="83" VerticalAlignment="Top"/>
     </Grid>
 </Page>

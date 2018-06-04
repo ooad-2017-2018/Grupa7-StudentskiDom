@@ -11,6 +11,7 @@ namespace ProjekatStudentskiDom.Klase
         private int brojSobe;
         private bool teretana;
         private string kanton;
+        public int rucak = 35, vecera = 35, kafeterija = 50;
 
         public string StudentId { get; set; }
 

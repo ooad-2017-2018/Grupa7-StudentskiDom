@@ -36,6 +36,10 @@ namespace ProjekatStudentskiDom
             if (s.Pol == 'M') dobrodosaoText.Text = "Dobrodošao, " + s.Ime + "e!";
             else dobrodosaoText.Text = "Dobrodošla, " + s.Ime + "!";
             List<string> novosti = sd.dajNovosti();
+            rucak.Text += s.rucak;
+            vecera.Text += s.vecera;
+            kafeterija.Text += s.kafeterija;
+
             foreach(string novost in novosti)
             {
                 listaNovostiStudent.Items.Add(novost);
@@ -54,11 +58,11 @@ namespace ProjekatStudentskiDom
             }
             else if (DateTime.Now.Hour >= 17 && DateTime.Now.Hour < 20)
             {
-                raiseTimer3();
+                raiseTimer4();
             }
             else
             {
-                raiseTimer4();
+                raiseTimer3();
             }
         }
 
